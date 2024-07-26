@@ -8,7 +8,13 @@ html {
   }
 }
 body {
-
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  @extend %causten-600;
+  color: $text;
 }
 button {
   background-color:transparent;
@@ -20,7 +26,7 @@ button {
 }
 .container {
   max-width: 1440px;
-  padding: 0 30px;
+  padding: 0 105px;
   margin: 0 auto;
 }
 .container-fluid {
@@ -29,35 +35,22 @@ button {
   padding: 0;
 }
 .title {
-  font-size: 50px;
-  line-height: 64px;
-  text-align: center;
-  @extend %lora-400;
+  font-size: 28px;
+  line-height: 33.5px;
+  @extend %coreSansC-600;
   display: block;
+  color: $title;
+  position: relative;
+  padding-left: 26px;
+  &::before {
+    position: absolute;
+    content:'';
+    width: 6px;
+    height: 28px;
+    left: 0;
+    top: 1px;
+    background-color: $accent;
+    border-radius: 10px ;
+  }
 }
 
-.title-left {
-  font-size: 50px;
-  line-height: 64px;
-  text-align: center;
-  @extend %lora-400;
-  display: block;
-  position: relative;
-  padding-bottom: 20px;
-  text-align: left;
-  
-    &::after {
-      position: absolute;
-      content: '';
-      width: 105px;
-      height: 1px;
-      border: 1px solid $accent;
-      bottom: 0;
-      left: 0;
-    }
-  
-    span {
-      @extend %lora-it-400;
-      color: $accent;
-    }
-  }

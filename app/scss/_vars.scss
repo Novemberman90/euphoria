@@ -1,32 +1,41 @@
-$text:#5d556c;
-$title:#303040;
-$accent:#5d5fef;
+$text:#8a8989;;
+$title:#3c4242;;
+$accent:#8a33fd;
+$white:#ffffff;
 
- %lora-400 {
-  font-family: 'Lora-Regular';
-  font-weight: 400;
+ %causten-700 {
+  font-family: 'Causten-Bold';
+  font-weight: 700;
 }
-%lora-it-400 {
-  font-family: 'Lora-Italic';
-  font-weight: 400;
+ %causten-600 {
+  font-family: 'Causten-Semi-Bold';
+  font-weight: 600;
 }
-%lora-500 {
-  font-family: 'Lora-Medium';
+ %causten-500 {
+  font-family: 'Causten-Medium';
   font-weight: 500;
 }
-%lora-it-500 {
-  font-family: 'Lora-MediumItalic';
+ %causten-400 {
+  font-family: 'Causten-Regular';
+  font-weight: 400;
+}
+ %causten-300 {
+  font-family: 'Causten-Light';
+  font-weight: 300;
+}
+ %coreSansC-500 {
+  font-family: 'CoreSansC-55Medium';
   font-weight: 500;
 }
- %manrope-300 {
-   font-family: 'Manrope-Light';
-   font-weight: 300;
- }
- %manrope-400 {
-   font-family: 'Manrope-Regular';
-   font-weight: 400;
- }
- %manrope-500 {
-   font-family: 'Manrope-Medium';
-   font-weight: 500;
- }
+ %coreSansC-600 {
+  font-family: 'CoreSansC-65Bold';
+  font-weight: 600;
+}
+ %coreSansC-800 {
+  font-family: 'CoreSansC-85Heavy';
+  font-weight: 800;
+}
+ %montserrat-800 {
+  font-family: 'Montserrat-ExtraBold';
+  font-weight: 800;
+}
