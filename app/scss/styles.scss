@@ -345,4 +345,127 @@
     display: inline-block;
   }
 }
+
+.savingzone {
+  padding: 100px 0;
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 393px;
+    width: 610px;
+    &:nth-child(-n+3) {
+        width: 400px;
+      }
+    &--hawaiian {
+      padding-left: 20px;
+      .savingzone__content {
+        align-items: flex-start;
+      }
+    }
+    &--printed,
+    &--cargo {
+      padding-right: 20px;
+      .savingzone__content {
+        align-items: flex-end;
+        margin-left: auto;
+      }
+    }
+
+    &--hawaiian,
+    &--printed {
+      color: $white;
+      a {
+        border: 1px solid $white;
+        color: $white;
+      }
+    }
+    &--cargo,
+    &--urban,
+    &--oversized {
+      color: $title;
+    .savingzone__content {
+      align-items: flex-start;
+      margin-left: auto;
+        a {
+          border: 1px solid $title;
+          color: $title;
+        }
+      }
+    }
+    &--urban,
+    &--oversized {
+      padding-right: 90px;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 165px;
+  }
+  &__content-label {
+    margin-top: 35px;
+    @extend %causten-700;
+    font-size: 12px;
+    line-height: 14px;
+    color: $white;
+    width: 104px;
+    height: 34px;
+    padding: 8px 16px;
+    text-align: center;
+    background-color: $title;
+  }
+  &__content-title {
+    margin-top: auto;
+    margin-bottom: 10px;
+    @extend %coreSansC-600;
+    font-size: 28px;
+    line-height: 38.43px;
+    letter-spacing: 2%;
+  }
+  &__content-text {
+    @extend %causten-600;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 10px;
+  }
+  &__content-subtext {
+    @extend %causten-700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: auto;
+  }
+  &__content-linkbox {
+    margin-bottom: auto;
+  }
+  &__content-img {
+    width: 27px;
+    height: 30px;
+    object-fit: cover;
+    margin: 0 auto 40px auto;
+  }
+  &__content-link {
+     @extend %causten-500;
+     width: 112px;
+     height: 34px;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 16px 8px 16px 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color:$title;
+  }
+}
 @import 'media';
