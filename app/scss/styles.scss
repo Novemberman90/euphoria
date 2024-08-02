@@ -703,7 +703,77 @@
       }
     }
   }
-
 }
+.feedback {
+  padding-top: 100px;
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__item {
+    padding: 24px;
+    width: 400px;
+    height: 300px;
+    border: 1.8px solid #bebcbd;
+    border-radius: 10px;
+  }
+  &__item-topbox {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  &__item-topbox-img {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+  }
+  &__item-title {
+    @extend %coreSansC-500;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 0.44px;
+    margin-bottom: 20px;
+    color: $title;
+  }
+  &__item-text {
+    @extend %causten-400;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.32px;
+    color: #807d7e;
+     white-space: pre-line;
+    /* overflow: hidden; */
+  }
 
+   .slick-slide {
+    width: 400px;
+    margin: 0 10px;
+   }
+  .slick-dots {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px;
+    li {
+        padding: 0 4px;
+        line-height: 0;
+    
+        button {
+          padding: 0;
+          font-size: 0;
+          background: #bebcbd4d;
+          opacity: 0.5;
+          width: 8px;
+          height: 8px;
+          border-radius:50%;
+          position: relative;
+    
+        }
+    
+        &.slick-active {
+          button {
+            background: #3c4242;
+          }
+        }
+      }
+  }
+}
 @import 'media';
