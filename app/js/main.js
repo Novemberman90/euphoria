@@ -1,4 +1,11 @@
 $(function() {
+    $('.menu__list.footer-categories__list').hide();
+    $('.footer-categories__title').on('click', function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass('footer-categories__title--active');
+     /*  $('.menu__list.footer-categories__list').toggleClass('footer-categories__list--active'); */
+
+    });
 
     $('.feedback__inner').slick({
     slidesToShow: 3,
