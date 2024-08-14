@@ -1,10 +1,32 @@
 $(function() {
+
     $('.menu__list.footer-categories__list').hide();
     $('.footer-categories__title').on('click', function() {
       $(this).next().slideToggle();
       $(this).toggleClass('footer-categories__title--active');
      /*  $('.menu__list.footer-categories__list').toggleClass('footer-categories__list--active'); */
+    });
 
+    $('.filter-price__title-box, .filter-color__title-box, .filter-size__title-box, .filter-style__title-box').on('click', function () {
+      $(this).next().slideToggle();
+      $(this).toggleClass('filter__title-box--hidden');
+    });
+
+    $('.filter__header').on('click', function() {
+      $('.filter-category, .filter-price__form, .filter-color__form, .filter-size__form, .filter-style__list').slideToggle();
+
+      $('.filter-price__title-box, .filter-color__title-box, .filter-size__title-box, .filter-style__title-box').toggleClass('filter__title-box--hidden');
+    });
+
+
+    $('.shop-content__filter-btn').on('click', function() {
+      $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active')
+        $(this).addClass('shop-content__filter-btn--active')
+    });
+
+    $('.button-new').on('click', function () {
+      $('.product-item').addClass('product-item--list');
+      $('.shop-content__inner').addClass('shop-content__nogrid');
     });
 
     $('.feedback__inner').slick({
@@ -88,5 +110,70 @@ $(function() {
   });
 
 
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+     prefix: "$",
+     onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+     },
+     onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+      /* $('.filter-price__from').text(data.from) - так я указываю атрибут у класса с какого эоемента нужно принимать значение */
+     }
+  });
+
+
+
+  
+
+  /*   class MenuCard {
+        constructor(src, alt, title, descr, price, parentSelector, ...classes) {
+          this.src = src;
+          this.alt = alt;
+          this.title = title;
+          this.descr = descr;
+          this.price = price;
+          this.parent = document.querySelector(parentSelector);
+          this.classes = classes;
+        }
+
+        render() {
+          const element = document.createElement('div');
+          
+          if(this.classes.length === 0) {
+            this.element = $('.product__item');
+            element.classList.add(this.element);
+          } else {
+            this.classes.forEach(className => element.classList.add(className));
+          }
+          element.innerHTML = 
+              `<button class="product__item-btn" type="submit"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M9.99486 4.93014C8.49535 3.18262 5.99481 2.71255 4.11602 4.31275C2.23723 5.91295 1.97273 8.5884 3.44815 10.481C4.67486 12.0545 8.38733 15.3732 9.60407 16.4474C9.7402 16.5675 9.80827 16.6276 9.88766 16.6512C9.95695 16.6718 10.0328 16.6718 10.1021 16.6512C10.1815 16.6276 10.2495 16.5675 10.3857 16.4474C11.6024 15.3732 15.3149 12.0545 16.5416 10.481C18.017 8.5884 17.7848 5.89611 15.8737 4.31275C13.9626 2.72938 11.4944 3.18262 9.99486 4.93014Z"
+              stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg></button>
+          <img class="product__img" src=${this.src} alt=${this.alt}>
+          <div class="product__content">
+            <div class="product__content-box">
+              <h4 class="product__content-title">${this.title}</h4>
+              <p class="product__content-text">${this.descr}</p>
+            </div>
+            <p class="product__price">$ ${this.price}</p>
+          </div>`
+          this.parent.append(element);
+        }
+      }
+
+    new MenuCard(
+        "images/limelight-3.avif",
+        "woman clothing",
+        'Levender Hoodie with ....',
+        'Nike’s  Brand',
+        119,
+        '.shop-content__inner',
+        'product__item',
+    ).render(); */
 
 });

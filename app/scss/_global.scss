@@ -20,6 +20,8 @@ button {
   background-color:transparent;
   border: none;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 .main {
   flex-grow: 1;
@@ -59,3 +61,6 @@ button {
   }
 }
 
+.hidden {
+  display: none;
+}
