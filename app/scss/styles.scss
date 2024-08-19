@@ -12,6 +12,9 @@
     align-items: center;
   }
 }
+.header-shop {
+border-bottom: 1px solid rgb(190, 188, 189);
+}
 .menu {
   display: flex;
   justify-content: space-between;
@@ -936,6 +939,7 @@
 
 // shop - woman
 .shop {
+  padding-bottom: 100px;
   &__inner {
     display: flex;
   }
@@ -958,6 +962,7 @@
     padding: 20px 30px;
     cursor: pointer;
     border: 1px solid rgba(190, 188, 189, .4);
+    border-top: none;
   }
   &__title-box {
     border-bottom: 1px solid rgba(190, 188, 189, .4);
@@ -1353,5 +1358,100 @@
     gap: 50px 0;
   }
 }
-
+.shop-descr {
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__inner{
+    div {
+      padding-left: 20px;
+      color: #807d7e;
+      font-size: 20px;
+      line-height: 33.5px;
+      letter-spacing: 1.4px;
+      &:last-child p {
+        margin-bottom: 20px;
+      }
+      h4 {
+        @extend %coreSansC-600;
+        margin-bottom: 25px;
+        & ~ h4 {
+          margin-top: 25px;
+        }
+      }
+      p {
+        @extend %causten-400;
+        b {
+          @extend %coreSansC-600;
+        }
+      }
+      a {
+        color: #807d7e;
+        @extend %coreSansC-600;
+        font-size: 20px;
+        line-height: 33.5px;
+        letter-spacing: 1.4px;
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+}
+.shop-price {
+  padding: 100px 0;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__inner {
+    padding-left: 20px;
+  }
+  table {
+    border-spacing: 0px;
+    border-radius: 12px;
+    background: rgba(245, 245, 245, 0.6);
+    width: 100%;
+    thead {
+      @extend %coreSansC-600;
+      color: $title;
+      font-size: 24px;
+      line-height: 33.5px;
+      letter-spacing: 1.4px;
+      tr {
+        th {
+          text-align: left;
+          border-bottom: 1px solid rgba(190, 188, 189, 0.4);
+          padding: 50px 0px 50px 84px;
+        }
+       th ~ th {
+          border-left: 1px solid rgba(190, 188, 189, 0.4);
+          text-align: center;
+          padding-left: 0px;
+       }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 25px 0px 25px 84px;
+        }
+        td ~ td {
+          text-align: center;
+          border-left: 1px solid rgba(190, 188, 189, 0.4);
+          padding-left: 0;
+        }
+      }
+    }
+    tr:first-of-type {
+      td {
+        padding-top: 50px;
+      }
+    }
+    tr:last-of-type {
+      td {
+        padding-bottom: 50px;
+      }
+    }
+} 
+}
 @import 'media';
