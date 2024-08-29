@@ -1701,46 +1701,19 @@ border-bottom: 1px solid rgb(190, 188, 189);
     border-radius: 50%;
     display: block;
     position: relative;
+  }
 
-    &::before {
+  &__color-input {
+    &:checked+.product-filter__color-checkbox {
+      &::before {
       position: absolute;
-      content: '';
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      left: -4px;
-      top: -4px;
-    }
-  }
-
-  &__color-input--dark {
-    &:checked+.product-filter__color-checkbox--dark {
-      &::before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        left: -4px;
+        top: -4px;
         border: 1px solid #3C4242;
-      }
-    }
-  }
-
-  &__color-input--yellow {
-    &:checked+.product-filter__color-checkbox--yellow {
-      &::before {
-        border: 1px solid #EDD146;
-      }
-    }
-  }
-
-  &__color-input--pink {
-    &:checked+.product-filter__color-checkbox--pink {
-      &::before {
-        border: 1px solid #EB84B0;
-      }
-    }
-  }
-
-  &__color-input--brown {
-    &:checked+.product-filter__color-checkbox--brown {
-      &::before {
-        border: 1px solid #9C1F35;
       }
     }
   }
@@ -1797,7 +1770,9 @@ border-bottom: 1px solid rgb(190, 188, 189);
     align-items: center;
     justify-content: center;
     background-color: $white;
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: $title;
       svg {
           fill: $white;
