@@ -1,5 +1,34 @@
 $(function() {
 
+    $('.product-tabs__top-item').on('click', function(e) {
+      e.preventDefault();
+      $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+      $(this).addClass('product-tabs__top-item--active');
+
+      $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+      $($(this).attr('href')).addClass('product-tabs__content-item--active');
+    });
+
+    $('.product-slide__thumb').slick({
+      asNavFor: '.product-slide__big',
+      infinite: false,
+      focusOnSelect: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      vertical: true,
+      draggable: false,
+    });
+    $('.product-slide__big').slick({
+      asNavFor: '.product-slide__thumb',
+      infinite: false,
+      draggable: false,
+      fade: true,
+      appendArrows: '.product-slide__arrws',
+      nextArrow:'<button type="button" class="slick-next"><svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.20263 5.31578C7.9444 5.51267 7.57545 5.46294 7.37856 5.2047L4.44463 1.35659C4.37158 1.30823 4.26493 1.30823 4.19189 1.35659L1.25796 5.2047C1.06107 5.46294 0.692119 5.51267 0.433882 5.31578C0.175646 5.11889 0.125913 4.74994 0.322801 4.4917L3.26686 0.630317C3.30121 0.585256 3.3532 0.522894 3.42522 0.463225C3.93831 0.0380759 4.6982 0.0380759 5.2113 0.463225C5.28331 0.522894 5.33531 0.585256 5.36966 0.630317L8.31372 4.4917C8.5106 4.74994 8.46087 5.11889 8.20263 5.31578Z" fill=""/></svg></button>' ,
+      prevArrow:'<button type="button" class="slick-prev"><svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.20263 5.31578C7.9444 5.51267 7.57545 5.46294 7.37856 5.2047L4.44463 1.35659C4.37158 1.30823 4.26493 1.30823 4.19189 1.35659L1.25796 5.2047C1.06107 5.46294 0.692119 5.51267 0.433882 5.31578C0.175646 5.11889 0.125913 4.74994 0.322801 4.4917L3.26686 0.630317C3.30121 0.585256 3.3532 0.522894 3.42522 0.463225C3.93831 0.0380759 4.6982 0.0380759 5.2113 0.463225C5.28331 0.522894 5.33531 0.585256 5.36966 0.630317L8.31372 4.4917C8.5106 4.74994 8.46087 5.11889 8.20263 5.31578Z" fill=""/></svg></button>',
+    });
+
+
     $('.menu__list.footer-categories__list').hide();
     $('.footer-categories__title').on('click', function() {
       $(this).next().slideToggle();

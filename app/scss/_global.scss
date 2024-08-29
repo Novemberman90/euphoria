@@ -64,3 +64,42 @@ button {
 .hidden {
   display: none;
 }
+
+.breadcrumbs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    @extend %causten-500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #807d7e;
+    padding-right: 35px;
+    position: relative;
+    &::after {
+      position: absolute;
+      background-image: url('../images/filter-icon-left.svg');
+      content: '';
+      width: 7px;
+      height: 13px;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:last-child {
+      color: $title;
+      /* цвет можно изменть, чтобы выделить последнюю ссылку т.е. страничку ге мы сейчас нахожимся. Даже если последний элемент изменят на спан, то сити будут работать как надо */
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
