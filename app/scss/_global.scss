@@ -103,3 +103,22 @@ button {
     color: inherit;
   }
 }
+
+.note-registration {
+  padding-top: 30px;
+  text-align: left;
+  &__text {
+    @extend %causten-400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #807d7e;
+  }
+  &__link {
+    @extend %causten-600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: $accent;
+  }
+}

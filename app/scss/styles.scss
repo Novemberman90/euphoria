@@ -6,7 +6,7 @@
 
 .header {
   &__inner {
-    padding: 40px 0px;
+    padding: 30px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,6 +121,16 @@ border-bottom: 1px solid rgb(190, 188, 189);
     }
     & + .user-nav__link {
       margin-left: 12px;
+    }
+    &--active {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+      background: $accent;
+    
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
     }
   }
 }
@@ -1454,6 +1464,9 @@ border-bottom: 1px solid rgb(190, 188, 189);
     }
 } 
 }
+// shop - woman - end
+
+/* product-page -start*/
 .product-one {
   background: linear-gradient(to right, #F6F6F6 50%, transparent 50%);
   &__inner {
@@ -1980,4 +1993,268 @@ border-bottom: 1px solid rgb(190, 188, 189);
     gap: 50px 0;
   }
 }
+/* product-page -end*/
+
+/* card page -start */
+.cart-page {
+  &__top {
+    padding: 50px 0;
+  }
+}
+.cart-header {
+  padding: 25px 0;
+  background-color: $title;
+    &__list {
+      display: grid; 
+      grid-template-columns: 4fr repeat(4, 2fr) 1fr;
+    }
+  
+    &__item {
+      @extend %causten-600;
+      font-size: 18px;
+      line-height: 22px;
+      text-transform: uppercase;
+      color: $white;
+      margin-right: auto;
+    }
+  }
+  .card-product {
+    &__inner {
+      padding: 20px 0 50px 0;
+    }
+    &__item {
+      display: grid;
+      grid-template-columns: 4fr repeat(4, 2fr) 1fr;
+      padding: 50px 0;
+      border-bottom: 1px solid #bebcbd;
+      &:last-child {
+        border-bottom: none;
+      }
+      & > * {
+        align-self: center;
+      }
+    }
+  
+    &__details {
+      display: flex;
+      gap: 0 20px;
+    }
+  
+    &__title {
+      @extend %causten-700;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+      color: $title;
+      margin-bottom: 10px;
+    }
+  
+    &__color-box,
+    &__size-box {
+      @extend %causten-500;
+      font-size: 14px;
+      line-height: 17px;
+      margin-bottom: 5px;
+      color: #807d7e;
+    }
+  
+    &__cost,
+    &__subtotal {
+      @extend %causten-700;
+      font-size: 18px;
+      line-height: 22px;
+      color: $title;
+    }
+    .jq-number__field {
+      width: 100px;
+    }
+
+    .jq-number__field input {
+      background: #f6f6f6;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      width: 100%;
+      height: 36px;
+      @extend %causten-500;
+      font-size: 12px;
+      line-height: 14px;
+      color: $title;
+      text-align: center;
+    }
+
+    .jq-number {
+      padding: 0;
+      position: relative;
+    }
+
+    .jq-number__spin {
+      position: absolute;
+      cursor: pointer;
+      width: 10px;
+      height: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .jq-number__spin::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 10px;
+      height: 1px;
+      background-color: $title;
+    }
+
+    .jq-number__spin.minus {
+      left: 23px;
+    }
+
+    .jq-number__spin.plus {
+      right: 23px;
+    }
+    .jq-number__spin.plus::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 10px;
+      background-color: $title;
+      top: 0;
+      left: 5px;
+    }
+  }
+  .cart-footer {
+    background-color: #F6F6F6;
+    &__inner {
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__discount {
+      max-width: 375px;
+      width: 100%;
+    }
+    &__discount-title {
+      @extend %causten-600;
+      font-size: 24px;
+      line-height: 29px;
+      color: $title;
+      margin-bottom: 10px;
+    }
+    &__discount-subtitle {
+      @extend %causten-400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #807d7e;
+      margin-bottom: 40px;
+    }
+    &__discount-form {
+      width: 100%;
+      display: flex;
+      margin-bottom: 50px;
+    }
+    &__discount-input {
+      border: 1px solid #bebcbd;
+      border-radius:12px 0 0 12px;
+      padding:10px;
+      @extend %causten-400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $title;
+      outline: none;
+      height: 43px;
+    }
+    &__discount-form-btn {
+      @extend %causten-600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $white;
+      background-color: $accent;
+      border: 1px solid #bebcbd;
+      border-radius: 0 12px 12px 0;
+      width: 160px;
+      height: 43px;
+      padding: 10px 20px 10px 30px;
+      &:hover {
+          background-color: #6620C1;
+          box-shadow: 0px 3px 4px 0px #0000001A;
+        }
+      
+        &:focus {
+          background: #6620C1;
+        }
+    }
+    &__discount-out {
+      @extend %causten-600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $title;
+      width: 232px;
+      height: 43px;
+      text-align: center;
+      border: 1px solid #bebcbd;
+      border-radius: 8px;
+      &:hover {
+        color:#8A33FD;
+        background: #6620C108;
+        border: 1px solid #3C4242;
+      }
+      &:focus {
+        background: #6620C108;
+        border: 1px solid #8A33FD;
+      }
+    }
+    &__total {
+      padding: 10px 0 50px 0;
+      max-width: 465px;
+      width: 100%;
+      text-align: center;
+    }
+    &__total-box {
+      padding: 0 90px 50px 90px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid rgb(190, 188, 189);
+      & > * {
+      display: flex;
+      justify-content: space-between;
+      color: $title;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 0.02em;
+      }
+    }
+    &__subtotal-box,
+    &__shipping-box {
+      @extend %causten-500;
+    }
+    &__subtotal-box {
+      margin-bottom: 15px;
+    }
+    &__shipping-box {
+      margin-bottom: 40px;
+    }
+    &__grandtotal-box {
+      @extend %causten-700;
+    }
+    &__total-btn {
+      @extend %causten-600;
+        font-size: 18px;
+        line-height: 22px;
+        color: $white;
+        width: 232px;
+        padding: 12px 20px 12px 20px;
+        border-radius: 8px;
+        background:$accent;
+        &:hover {
+          background-color: #6620C1;
+          box-shadow: 0px 3px 4px 0px #0000001A;
+        }
+        &:focus {
+          background: #6620C1;
+        }
+    }
+  }
+
+
 @import 'media';
