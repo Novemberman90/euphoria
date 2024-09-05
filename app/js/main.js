@@ -1,7 +1,95 @@
 $(function() {
 
   /* card page */
+  //Quantity
+
+$(function() {
+  function updateSubtotal(card) {
+     let $card = $(card);
+     let price =  parseFloat($card.find('.card-product__cost').data('cost'));
+     let quantity = parseInt($card.find('.card-product__quantity-input input').val(), 10);
+
+        if (isNaN(price) || isNaN(quantity)) {
+          $card.find('.card-product__subtotal').text('$0.00');
+          return;
+        }
+
+     let subtotal = price * quantity;
+  
+     $card.find('.card-product__subtotal').text('$' + subtotal.toFixed(2));
+
+     // После обновления отдельной карточки, обновляем общую сумму
+     updateTotal();
+  }
+
+  function updateTotal() {
+    let total = 0;
+    let discount = 5; // скидка
+
+   $('.card-product__item').each(function() {
+    let subTotalText = $(this).find('.card-product__subtotal').text();
+    let subtotal = parseFloat(subTotalText.replace('$', ''));
+
+    if(!isNaN(subtotal)) {
+      total += subtotal;
+    }
+
+    let discountTotal = total - discount; // Применяем фиксированную скидку
+    if (discountTotal < 0) {
+      discountTotal = 0; // Не допускаем отрицательную сумму
+    }
+
+    $('.cart-footer__subtotal').text('$' + discountTotal.toFixed(2));
+    $('.cart-footer__grandtotal').text('$' + total.toFixed(2));
+   });
+
+     // Обновление суммы при изменении количества
+    }
+    $('.card-product__quantity-input input').on('input', function () {
+    updateSubtotal($(this).closest('.card-product__item'));
+    });
+  
+   // Обновление суммы при клике на кнопки плюс/минус
+   $('.jq-number__spin').on('click', function () {
+    let $input = $(this).siblings('.jq-number__field').find('input');
+    let currentValue = parseInt($input.val(), 10);
+  
+    let minValue = parseInt($input.attr('min'), 10);
+    let maxValue = parseInt($input.attr('max'), 10);
+  
+    if ($(this).hasClass('plus') && currentValue < maxValue) {
+      $input.val(currentValue);
+    } else if ($(this).hasClass('minus') && currentValue > minValue) {
+      $input.val(currentValue - 1);
+    }
+
+    updateSubtotal($(this).closest('.card-product__item'));
+   });
+
+   // При загрузке пересчитываю стоимость
+   $('.card-product__item').each(function() {
+    updateSubtotal($(this));
+   });
+
+     // Обработчик удаления карточки
+  $('.card-product__action').on('click', function() {
+    $(this).closest('.card-product__item').remove(); // Удаляем карточку
+    updateTotal(); // Пересчитываем общую сумму
+  });
+
+  // Инициализация суммы для всех карточек при загрузке страницы
+  $('.card-product__item').each(function() {
+    updateSubtotal(this);
+  });
+
+     // Рассчитываем общую сумму при загрузке страницы
+    updateTotal();
+  });
+
+
     $('.card-product__quantity-input').styler();
+
+
   /* product-page */
     $('.product-tabs__top-item').on('click', function(e) {
       e.preventDefault();
@@ -210,3 +298,4 @@ $(function() {
     ).render(); */
 
 });
+

@@ -135,12 +135,12 @@
                   </div>
                 </div>
               </div>
-              <div class="card-product__cost">$29.00</div>
+              <div class="card-product__cost" data-cost="29">$29.00</div>
               <form class="card-product__quantity-form" action="#">
-                <input class="card-product__quantity-input" type="number" value="1" min="1">
+                <input class="card-product__quantity-input" type="number" value="1" min="1" max="10">
               </form>
               <div class="card-product__shipping">FREE</div>
-              <div class="card-product__subtotal">$29.00</div>
+              <div class="card-product__subtotal"></div>
               <div class="card-product__action-box">
                 <button class="card-product__action" type="button">
                   <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,7 +164,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card-product__cost">$119.00</div>
+              <div class="card-product__cost" data-cost="119">$119.00</div>
               <form class="card-product__quantity-form" action="#">
                 <input class="card-product__quantity-input" type="number" value="1" min="1">
               </form>
@@ -193,7 +193,7 @@
                   </div>
                 </div>
               </div>
-              <div class="card-product__cost">$123.00</div>
+              <div class="card-product__cost"data-cost="123">$123.00</div>
               <form class="card-product__quantity-form" action="#">
                 <input class="card-product__quantity-input" type="number" value="1" min="1">
               </form>
@@ -393,160 +393,6 @@
     </div>
   </div>
 </footer>
-<script async src="https://maps.googleapis.com/maps/api/js?callback=initMap" defer>
-</script>
-<script>
-  let map;
-
-    async function initMap() {
-      const { Map } = await google.maps.importLibrary("maps");
-
-      map = new Map(document.getElementById("map"), {
-        center: { lat: 33.9944251, lng:-118.223643},
-        zoom: 10,
-        styles: 
-        [
-            {
-              "featureType": "all",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "hue": "#ff4400"
-                },
-                {
-                  "saturation": -68
-                },
-                {
-                  "lightness": -4
-                },
-                {
-                  "gamma": 0.72
-                }
-              ]
-            },
-            {
-              "featureType": "landscape.man_made",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "hue": "#0077ff"
-                },
-                {
-                  "gamma": 3.1
-                }
-              ]
-            },
-            {
-              "featureType": "poi.park",
-              "elementType": "all",
-              "stylers": [
-                {
-                  "hue": "#44ff00"
-                },
-                {
-                  "saturation": -23
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "saturation": -64
-                },
-                {
-                  "hue": "#ff9100"
-                },
-                {
-                  "lightness": 16
-                },
-                {
-                  "gamma": 0.47
-                },
-                {
-                  "weight": 2.7
-                }
-              ]
-            },
-            {
-              "featureType": "transit.line",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "lightness": -48
-                },
-                {
-                  "hue": "#ff5e00"
-                },
-                {
-                  "gamma": 1.2
-                },
-                {
-                  "saturation": -23
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "all",
-              "stylers": [
-                {
-                  "hue": "#00ccff"
-                },
-                {
-                  "gamma": 0.44
-                },
-                {
-                  "saturation": -33
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "hue": "#007fff"
-                },
-                {
-                  "gamma": 0.77
-                },
-                {
-                  "saturation": 65
-                },
-                {
-                  "lightness": 99
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "gamma": 0.11
-                },
-                {
-                  "weight": 5.6
-                },
-                {
-                  "saturation": 99
-                },
-                {
-                  "hue": "#0091ff"
-                },
-                {
-                  "lightness": -86
-                }
-              ]
-            }
-          ]
-      });
-    }
-
-    initMap();
-</script>
 <script src="js/main.min.js"></script>
 </body>
 </html>
