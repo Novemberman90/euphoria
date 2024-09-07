@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<header class="header">
+<header class="header header-shop">
   <div class="container">
     <div class="header__inner">
       <a class="header__logo" href="#">
@@ -27,7 +27,7 @@
       <nav class="menu">
         <ul class="menu__list">
           <li class="menu__list-item">
-            <a class="menu__list-item-link menu__list-item-link--active" href="#contact">Shop</a>
+            <a class="menu__list-item-link" href="#contact">Shop</a>
           </li>
           <li class="menu__list-item">
             <a class="menu__list-item-link" href="#gallery">Men</a>
@@ -68,7 +68,7 @@
               stroke="#807D7E" stroke-width="1.5" stroke-linecap="round" />
           </svg>
         </a>
-        <a class="user-nav__link" href="#">
+        <a class="user-nav__link user-nav__link--active" href="#">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2.5 3.33334H3.00526C3.85578 3.33334 4.56986 3.97376 4.6621 4.81926L5.3379 11.0141C5.43014 11.8596 6.14422 12.5 6.99474 12.5H14.205C14.9669 12.5 15.6317 11.9834 15.82 11.2452L16.9699 6.73593C17.2387 5.68213 16.4425 4.65742 15.355 4.65742H5.5M5.52063 15.5208H6.14563M5.52063 16.1458H6.14563M14.6873 15.5208H15.3123M14.6873 16.1458H15.3123M6.66667 15.8333C6.66667 16.2936 6.29357 16.6667 5.83333 16.6667C5.3731 16.6667 5 16.2936 5 15.8333C5 15.3731 5.3731 15 5.83333 15C6.29357 15 6.66667 15.3731 6.66667 15.8333ZM15.8333 15.8333C15.8333 16.2936 15.4602 16.6667 15 16.6667C14.5398 16.6667 14.1667 16.2936 14.1667 15.8333C14.1667 15.3731 14.5398 15 15 15C15.4602 15 15.8333 15.3731 15.8333 15.8333Z"
@@ -81,6 +81,120 @@
   </div>
 </header>
 <main class="main">
+  <section class="checkout">
+    <div class="container">
+      <div class="checkout__top-box">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="index.html">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                My Account
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                Check Out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2 class="checkout__title title">Check Out</h2>
+      <div class="checkout__inner">
+        <div class="checkout__content">
+          <form class="checkout__form delivery-form" action="#">
+            <h3 class="checkout__form-title">Billing Details</h3>
+            <div class="delivery-form__box delivery-form__box--style">
+              <div class="delivery-form__costumer">
+                <label class="delivery-form__costumer-name">
+                  <span>First Name*</span>
+                  <input class="delivery-form__costumer-input" type="text" name="name">
+                </label>
+                <label class="delivery-form__costumer-last-name">
+                  <span>Last Name*</span>
+                  <input class="delivery-form__costumer-input" type="text" name="last-name">
+                </label>
+              </div>
+              <div class="delivery-form__region">
+                <label class="delivery-form__region-name">
+                  <span>Country / Region*</span>
+                  <input class="delivery-form__region-input" type="text" name="country">
+                </label>
+                <label class="delivery-form__region-company">
+                  <span>Company Name</span>
+                  <input class="delivery-form__region-input" type="text" name="company">
+                </label>
+              </div>
+              <div class="delivery-form__adress">
+                <label class="delivery-form__adress-street">
+                  <span>Street Address*</span>
+                  <input class="delivery-form__adress-input" type="text" name="street">
+                </label>
+                <label class="delivery-form__adress-apart">
+                  <span>Apt, suite, unit</span>
+                  <input class="delivery-form__adress-input" type="text" name="apartament">
+                </label>
+              </div>
+              <div class="delivery-form__postal">
+                <label class="delivery-form__postal-city">
+                  <span>City*</span>
+                  <input class="delivery-form__postal-city-input" type="text" name="city">
+                </label>
+                <label class="delivery-form__postal-state">
+                  <span>State*</span>
+                  <select class="delivery-form__postal-select" name="state">
+                    <option value="1">State 1</option>
+                    <option value="2">State 2</option>
+                    <option value="3">State 3</option>
+                  </select>
+                </label>
+                <label class="delivery-form__postal-code">
+                  <span>Postal Code*</span>
+                  <input class="delivery-form__postal-code-input" type="text" name="code">
+                </label>
+                <label class="delivery-form__postal-phone">
+                  <span>Phone*</span>
+                  <input class="delivery-form__postal-code-input" type="tel" name="phone">
+                </label>
+              </div>
+              <div class="delivery-form__bottom-box">
+                <a class="delivery-form__bottom-link" href="#">Continue to delivery</a>
+                <label class="delivery-form__bottom-label">
+                  <input class="delivery-form__bottom-checkbox" type="checkbox" name="checkbox">
+                  <span class="delivery-form__bottom-checkstyle"></span>
+                  <p class="delivery-form__bottom-text">
+                    Save my information for a faster checkout
+                  </p>
+                </label>
+              </div>
+            </div>
+            <div class="shipping-address">
+              <h3 class="checkout__form-title">Shipping Address</h3>
+              <p class="checkout__form-subtitle">Select the address that matches your card or payment method.
+              </p>
+              <div class="shipping-address__box">
+                <label class="shipping-address__item">
+                  <input class="shipping-address__radio" type="radio" name="address" checked>
+                  <span class="shipping-address__radio-checked"></span>
+                  <span class="shipping-address__text">Same as Billing address</span>
+                </label>
+                <label class="shipping-address__item">
+                  <input class="shipping-address__radio" type="radio" name="address" >
+                  <span class="shipping-address__radio-checked"></span>
+                  <span class="shipping-address__text">Use a different shipping address</span>
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 <footer class="footer">
   <div class="container-m">

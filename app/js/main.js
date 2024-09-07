@@ -87,7 +87,7 @@ $(function() {
   });
 
 
-    $('.card-product__quantity-input').styler();
+    $('.card-product__quantity-input, .delivery-form__postal-select').styler();
 
 
   /* product-page */
