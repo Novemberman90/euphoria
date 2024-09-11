@@ -1,4 +1,40 @@
 $(function() {
+  /* checkout page */
+/* security-code */
+$('.payment-method__security-code-open').hide();
+  $('.payment-method__security-code-box').on('click', function() {
+    const passwordField = $('#security-code');
+    const passwordFieldType = passwordField.attr('type');
+
+     // Если тип поля пароль, меняем его на текст для показа
+    if (passwordFieldType === 'password') {
+      passwordField.attr('type', 'text');
+      $('.payment-method__security-code-close').hide();
+      $('.payment-method__security-code-open').show();
+       // Меняем иконку на "глаз с чертой"
+    } else {
+      passwordField.attr('type', 'password');
+      $('.payment-method__security-code-open').hide();
+      $('.payment-method__security-code-close').show();
+       // Меняем иконку обратно на обычный глаз
+    }
+  });
+
+  // payment-method item
+  $('.payment-method__content').hide();
+
+    $('input[type="radio"]:checked').each(function() {
+      if($(this).prop('checked')) {
+        $(this).closest('.payment-method__item').find('.payment-method__content').show();
+      }
+    });
+
+   $('.payment-method__radio').on('change', function () {
+    $('.payment-method__content').slideUp(300);    
+
+     $(this).closest('.payment-method__item').find('.payment-method__content').slideDown(300);
+   });
+
 
   /* card page */
   //Quantity

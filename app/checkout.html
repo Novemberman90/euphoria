@@ -113,41 +113,41 @@
               <div class="delivery-form__costumer">
                 <label class="delivery-form__costumer-name">
                   <span>First Name*</span>
-                  <input class="delivery-form__costumer-input" type="text" name="name">
+                  <input class="delivery-form__costumer-input" type="text" name="name" placeholder="First Name" required>
                 </label>
                 <label class="delivery-form__costumer-last-name">
                   <span>Last Name*</span>
-                  <input class="delivery-form__costumer-input" type="text" name="last-name">
+                  <input class="delivery-form__costumer-input" type="text" name="last-name" placeholder="Last Name" required>
                 </label>
               </div>
               <div class="delivery-form__region">
                 <label class="delivery-form__region-name">
                   <span>Country / Region*</span>
-                  <input class="delivery-form__region-input" type="text" name="country">
+                  <input class="delivery-form__region-input" type="text" name="country" placeholder="Country / Region" required>
                 </label>
                 <label class="delivery-form__region-company">
                   <span>Company Name</span>
-                  <input class="delivery-form__region-input" type="text" name="company">
+                  <input class="delivery-form__region-input" type="text" name="company" placeholder="Company (optional)">
                 </label>
               </div>
               <div class="delivery-form__adress">
                 <label class="delivery-form__adress-street">
                   <span>Street Address*</span>
-                  <input class="delivery-form__adress-input" type="text" name="street">
+                  <input class="delivery-form__adress-input" type="text" name="street" placeholder="House number and street name" required>
                 </label>
                 <label class="delivery-form__adress-apart">
                   <span>Apt, suite, unit</span>
-                  <input class="delivery-form__adress-input" type="text" name="apartament">
+                  <input class="delivery-form__adress-input" type="text" name="apartament" placeholder="apartment, suite, unit, etc. (optional)">
                 </label>
               </div>
               <div class="delivery-form__postal">
                 <label class="delivery-form__postal-city">
                   <span>City*</span>
-                  <input class="delivery-form__postal-city-input" type="text" name="city">
+                  <input class="delivery-form__postal-city-input" type="text" name="city" placeholder="Town / City" required>
                 </label>
                 <label class="delivery-form__postal-state">
                   <span>State*</span>
-                  <select class="delivery-form__postal-select" name="state">
+                  <select class="delivery-form__postal-select" name="state" required>
                     <option value="1">State 1</option>
                     <option value="2">State 2</option>
                     <option value="3">State 3</option>
@@ -155,11 +155,11 @@
                 </label>
                 <label class="delivery-form__postal-code">
                   <span>Postal Code*</span>
-                  <input class="delivery-form__postal-code-input" type="text" name="code">
+                  <input class="delivery-form__postal-code-input" type="text" name="code" placeholder="Postal Code">
                 </label>
                 <label class="delivery-form__postal-phone">
                   <span>Phone*</span>
-                  <input class="delivery-form__postal-code-input" type="tel" name="phone">
+                  <input class="delivery-form__postal-code-input" type="tel" name="phone" placeholder="Phone" required>
                 </label>
               </div>
               <div class="delivery-form__bottom-box">
@@ -174,8 +174,8 @@
               </div>
             </div>
             <div class="shipping-address">
-              <h3 class="checkout__form-title">Shipping Address</h3>
-              <p class="checkout__form-subtitle">Select the address that matches your card or payment method.
+              <h3 class="checkout__form-title shipping-address__title">Shipping Address</h3>
+              <p class="checkout__form-subtitle shipping-address__subtitle">Select the address that matches your card or payment method.
               </p>
               <div class="shipping-address__box">
                 <label class="shipping-address__item">
@@ -190,7 +190,171 @@
                 </label>
               </div>
             </div>
+            <div class="shipping-method">
+              <h3 class="checkout__form-title shipping-method__title">Shipping Method</h3>
+              <div class="shipping-method__box">
+                <div class="shipping-method__item">
+                  <h4 class="shipping-method__item-title">Arrives by Monday, June 7</h4>
+                </div>
+                <div class="shipping-method__item">
+                  <div class="shipping-method__item-box">
+                    <h4 class="shipping-method__item-title">Delivery Charges</h4>
+                    <p class="shipping-method__subtitle">Additional fess may apply</p>
+                  </div>
+                  <span class="shipping-method__nubmer">$5.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="payment-method">
+              <h3 class="checkout__form-title payment-method__title">Payment Method</h3>
+              <p class="checkout__form-subtitle payment-method__subtitle">All transactions are secure and encrypted.
+              </p>
+              <div class="payment-method__container">
+                <div class="payment-method__item">
+                  <label class="payment-method__label">
+                    <input class="payment-method__radio" type="radio" name="payment-method" checked>
+                    <span class="payment-method__radio-checked"></span>
+                    <div class="payment-method__box-title">
+                      <h4 class="payment-method__title-box">Credit Card</h4>
+                      <p class="payment-method__subtitle-box">We accept all major credit cards.
+                      </p>
+                    </div>
+                  </label>
+                  <div class="payment-method__content">
+                    <div class="payment-method__logo-set">
+                      <img class="payment-method__logo" src="./images/g-pay.svg" alt="g-pay">
+                      <img class="payment-method__logo" src="./images/visa.svg" alt="visa">
+                      <img class="payment-method__logo" src="./images/payPal.svg" alt="PayPal">
+                      <img class="payment-method__logo" src="./images/payPass.svg" alt="/PyPass">
+                    </div>
+                    <fieldset class="payment-method__details">
+                      <label class="payment-method__card-number-label" for="card-number">
+                        <input type="text" id="card-number" placeholder="Card number" required>
+                      </label>
+                      <label class="payment-method__card-name-label" for="card-name">
+                        <input type="text" id="card-name" placeholder="Name of card" required>
+                      </label>
+                      <label class="payment-method__expiry-date-label" for="expiry-date">
+                        <input type="text" id="expiry-date" placeholder="Expiration date (MM/YY)" required>
+                      </label>
+                      <label class="payment-method__security-code-label" for="security-code">
+                        <input type="password" id="security-code" placeholder="Security Code" required>
+                        <div class="payment-method__security-code-box">
+                          <span class="payment-method__security-code-close">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M1.66696 9.07403C1.35385 8.39284 1.35385 7.60699 1.66696 6.92581C3.1163 3.77264 6.30262 1.58325 10.0003 1.58325C13.698 1.58325 16.8843 3.77265 18.3337 6.92581C18.6468 7.607 18.6468 8.39285 18.3337 9.07403C16.8843 12.2272 13.698 14.4166 10.0003 14.4166C6.30262 14.4166 3.1163 12.2272 1.66696 9.07403Z"
+                                stroke="" stroke-width="1.5" />
+                              <path
+                                d="M12.7503 7.99992C12.7503 9.5187 11.5191 10.7499 10.0003 10.7499C8.48152 10.7499 7.25031 9.5187 7.25031 7.99992C7.25031 6.48114 8.48152 5.24992 10.0003 5.24992C11.5191 5.24992 12.7503 6.48114 12.7503 7.99992Z"
+                                stroke="" stroke-width="1.5" />
+                            </svg>
+                          </span>
+                          <span class="payment-method__security-code-open">
+                            <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M11.0001 4.25C10.2707 4.25 9.57126 4.53973 9.05554 5.05546C8.53981 5.57118 8.25008 6.27065 8.25008 7C8.25008 7.72935 8.53981 8.42882 9.05554 8.94454C9.57126 9.46027 10.2707 9.75 11.0001 9.75C11.7294 9.75 12.4289 9.46027 12.9446 8.94454C13.4604 8.42882 13.7501 7.72935 13.7501 7C13.7501 6.27065 13.4604 5.57118 12.9446 5.05546C12.4289 4.53973 11.7294 4.25 11.0001 4.25ZM11.0001 11.5833C9.78451 11.5833 8.61872 11.1004 7.75917 10.2409C6.89963 9.38136 6.41675 8.21558 6.41675 7C6.41675 5.78442 6.89963 4.61864 7.75917 3.75909C8.61872 2.89955 9.78451 2.41667 11.0001 2.41667C12.2157 2.41667 13.3814 2.89955 14.241 3.75909C15.1005 4.61864 15.5834 5.78442 15.5834 7C15.5834 8.21558 15.1005 9.38136 14.241 10.2409C13.3814 11.1004 12.2157 11.5833 11.0001 11.5833ZM11.0001 0.125C6.41675 0.125 2.50258 2.97583 0.916748 7C2.50258 11.0242 6.41675 13.875 11.0001 13.875C15.5834 13.875 19.4976 11.0242 21.0834 7C19.4976 2.97583 15.5834 0.125 11.0001 0.125Z"
+                                fill="#807D7E" />
+                            </svg>
+                          </span>
+                        </div>
+                      </label>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="payment-method__item">
+                  <label class="payment-method__label">
+                    <input class="payment-method__radio" type="radio" name="payment-method">
+                    <span class="payment-method__radio-checked"></span>
+                    <div class="payment-method__box-title">
+                      <h4 class="payment-method__title-box">Cash on delivery</h4>
+                      <p class="payment-method__subtitle-box">Pay with cash upon delivery.
+                      </p>
+                    </div>
+                  </label>
+                  <div class="payment-method__content">
+                    cotent 2
+                  </div>
+                </div>
+                <div class="payment-method__item">
+                  <label class="payment-method__label">
+                    <input class="payment-method__radio" type="radio" name="payment-method">
+                    <span class="payment-method__radio-checked"></span>
+                    <div class="payment-method__box-title">
+                      <h4 class="payment-method__title-box">Paypol</h4>
+                    </div>
+                  </label>
+                  <div class="payment-method__content">
+                    cotent 3
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="checkout__form-btn" type="submit">Pay Now</button>
           </form>
+        </div>
+        <div class="checkout__order">
+          <div class="checkout-order">
+            <h3 class="checkout-order__title">Order Summary</h3>
+            <div class="checkout-order__items">
+              <div class="checkout-order__item">
+                <div class="checkout-order__detalis">
+                  <img class="checkout-order__img" src="images/card-page-1.jpg" alt="cart images">
+                  <div class="checkout-order__item-title-box">
+                    <h5 class="checkout-order__title-item">Blue Flower Print Crop Top <span class="checkout-order__title-item-symbol">x</span><span class="checkout-order__title-item-quantity"> 1</span></h5>
+                    <div class="checkout-order__color-box">
+                      Color : <span class="checkout-order__color">Yellow</span>
+                    </div>
+                  </div>
+                </div>
+                  <div class="checkout-order__cost" data-cost="29">$29.00</div>
+              </div>
+              <div class="checkout-order__item">
+                <div class="checkout-order__detalis">
+                  <img class="checkout-order__img" src="images/card-page-2.jpg" alt="cart images">
+                  <div class="checkout-order__item-title-box">
+                    <h5 class="checkout-order__title-item">Levender Hoodie <span class="checkout-order__title-item-symbol">x</span><span class="checkout-order__title-item-quantity"> 2</span></h5>
+                    <div class="checkout-order__color-box">
+                      Color : <span class="checkout-order__color">Levender</span>
+                    </div>
+                  </div>
+                </div>
+                  <div class="checkout-order__cost" data-cost="119">$119.00</div>
+              </div>
+              <div class="checkout-order__item">
+                <div class="checkout-order__detalis">
+                  <img class="checkout-order__img" src="images/card-page-3.jpg" alt="cart images">
+                  <div class="checkout-order__item-title-box">
+                    <h5 class="checkout-order__title-item">Black Sweatshirt <span class="checkout-order__title-item-symbol">x</span><span class="checkout-order__title-item-quantity"> 1</span></h5>
+                    <div class="checkout-order__color-box">
+                      Color : <span class="checkout-order__color">Black</span>
+                    </div>
+                  </div>
+                </div>
+                  <div class="checkout-order__cost" data-cost="123">$123.00</div>
+              </div>
+            </div>
+            <div class="checkout-order__total-items">
+              <div class="checkout-order__total-item checkout-order__subtotal-item-box">
+                  <div class="checkout-order__subtotal-item">
+                  <h5 class="checkout-order__subtotal-title">Subtotal<span class="checkout-order__subtotal-quantity-text"> ( <span class="checkout-order__subtotal-quantity">3</span> item )</span></h5>
+                  <span class="checkout-order__subtotal-sum">$513.00</span>
+                  </div>
+                  <div class="checkout-order__savings-item">
+                    <h5 class="checkout-order__savings-title">Savings</h5>
+                    <span class="checkout-order__savings-sum">-$30.00</span>
+                  </div>
+              </div>
+              <div class="checkout-order__total-item checkout-order__shipping-item">
+                <h5 class="checkout-order__shipping-title">Shipping</h5>
+                <span class="checkout-order__shipping-sum">-$5.00</span>
+              </div>
+              <div class="checkout-order__total-item checkout-order__grand-total-item">
+                <h5 class="checkout-order__total-title">Total</h5>
+                <span class="checkout-order__grand-total-sum">$478.00</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -342,160 +506,6 @@
     </div>
   </div>
 </footer>
-<script async src="https://maps.googleapis.com/maps/api/js?callback=initMap" defer>
-</script>
-<script>
-  let map;
-
-    async function initMap() {
-      const { Map } = await google.maps.importLibrary("maps");
-
-      map = new Map(document.getElementById("map"), {
-        center: { lat: 33.9944251, lng:-118.223643},
-        zoom: 10,
-        styles: 
-        [
-            {
-              "featureType": "all",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "hue": "#ff4400"
-                },
-                {
-                  "saturation": -68
-                },
-                {
-                  "lightness": -4
-                },
-                {
-                  "gamma": 0.72
-                }
-              ]
-            },
-            {
-              "featureType": "landscape.man_made",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "hue": "#0077ff"
-                },
-                {
-                  "gamma": 3.1
-                }
-              ]
-            },
-            {
-              "featureType": "poi.park",
-              "elementType": "all",
-              "stylers": [
-                {
-                  "hue": "#44ff00"
-                },
-                {
-                  "saturation": -23
-                }
-              ]
-            },
-            {
-              "featureType": "transit",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "saturation": -64
-                },
-                {
-                  "hue": "#ff9100"
-                },
-                {
-                  "lightness": 16
-                },
-                {
-                  "gamma": 0.47
-                },
-                {
-                  "weight": 2.7
-                }
-              ]
-            },
-            {
-              "featureType": "transit.line",
-              "elementType": "geometry",
-              "stylers": [
-                {
-                  "lightness": -48
-                },
-                {
-                  "hue": "#ff5e00"
-                },
-                {
-                  "gamma": 1.2
-                },
-                {
-                  "saturation": -23
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "all",
-              "stylers": [
-                {
-                  "hue": "#00ccff"
-                },
-                {
-                  "gamma": 0.44
-                },
-                {
-                  "saturation": -33
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "labels.text.fill",
-              "stylers": [
-                {
-                  "hue": "#007fff"
-                },
-                {
-                  "gamma": 0.77
-                },
-                {
-                  "saturation": 65
-                },
-                {
-                  "lightness": 99
-                }
-              ]
-            },
-            {
-              "featureType": "water",
-              "elementType": "labels.text.stroke",
-              "stylers": [
-                {
-                  "gamma": 0.11
-                },
-                {
-                  "weight": 5.6
-                },
-                {
-                  "saturation": 99
-                },
-                {
-                  "hue": "#0091ff"
-                },
-                {
-                  "lightness": -86
-                }
-              ]
-            }
-          ]
-      });
-    }
-
-    initMap();
-</script>
 <script src="js/main.min.js"></script>
 </body>
 </html>
