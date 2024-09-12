@@ -81,15 +81,34 @@
   </div>
 </header>
 <main class="main">
-  <section class="empty-cart">
+  <section class="confirm-order">
     <div class="container">
-      <div class="empty-cart__inner">
-        <div class="empty-cart__img-box">
-          <img class="empty-cart__img" src="images/order-empty.svg" alt="empty cart">
+      <div class="confirm-order__inner">
+        <div class="confirm-order__message-box">
+          <div class="confirm-order__message" style="background-image: url('images/confirm-order-message-bg.svg');">
+            <div class="confirm-order__content">
+              <button class="confirm-order__message-btn">
+                <svg width="17.927734" height="17.948486" viewBox="0 0 17.9277 17.9485" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <desc>
+                    Created with Pixso.
+                  </desc>
+                  <defs />
+                  <path id="Vector"
+                    d="M1.2 17.93C1.04 17.94 0.89 17.91 0.74 17.86C0.59 17.8 0.46 17.71 0.35 17.6C0.24 17.48 0.15 17.35 0.09 17.2C0.03 17.05 0 16.9 0 16.74C0 16.58 0.03 16.42 0.09 16.27C0.15 16.12 0.24 15.99 0.35 15.88L15.87 0.44C16.1 0.22 16.4 0.09 16.72 0.09C17.04 0.09 17.34 0.22 17.57 0.44C17.68 0.55 17.77 0.68 17.83 0.83C17.89 0.98 17.92 1.14 17.92 1.3C17.92 1.46 17.89 1.61 17.83 1.76C17.77 1.91 17.68 2.04 17.57 2.16L2.04 17.69C1.93 17.79 1.79 17.86 1.65 17.9C1.5 17.94 1.35 17.95 1.2 17.93Z"
+                    fill="#D1D3D4" fill-opacity="1.000000" fill-rule="nonzero" />
+                  <path id="Vector"
+                    d="M16.72 17.93C16.56 17.94 16.41 17.91 16.26 17.86C16.11 17.8 15.98 17.71 15.87 17.6L0.35 2.06C0.24 1.95 0.15 1.81 0.09 1.67C0.03 1.52 0 1.36 0 1.2C0 1.04 0.03 0.88 0.09 0.73C0.15 0.59 0.24 0.45 0.35 0.34C0.58 0.12 0.88 3.05e-5 1.2 3.05e-5C1.52 3.05e-5 1.82 0.12 2.04 0.34L17.57 15.88C17.68 15.99 17.77 16.12 17.83 16.27C17.89 16.42 17.92 16.58 17.92 16.74C17.92 16.9 17.89 17.05 17.83 17.2C17.77 17.35 17.68 17.48 17.57 17.6C17.46 17.71 17.32 17.8 17.18 17.86C17.03 17.91 16.88 17.94 16.72 17.93Z"
+                    fill="#D1D3D4" fill-opacity="1.000000" fill-rule="nonzero" />
+                </svg>
+              </button>
+              <img class="confirm-order__img" src="images/confirm-order-check.svg" alt="">
+              <h1 class="confirm-order__message-title">Your Order is
+                Confirmed</h1>
+              <a href="index.html" class="confirm-order__message-link">Continue Shopping</a>
+            </div>
+          </div>
         </div>
-        <h2 class="empty-cart__title">Your cart is empty and sad :(</h2>
-        <p class="empty-cart__subtitle">Add something to make it happy!</p>
-        <a class="empty-cart__link" href="index.html">Continue Shopping</a>
       </div>
     </div>
   </section>
@@ -240,6 +259,160 @@
     </div>
   </div>
 </footer>
+<script async src="https://maps.googleapis.com/maps/api/js?callback=initMap" defer>
+</script>
+<script>
+  let map;
+
+    async function initMap() {
+      const { Map } = await google.maps.importLibrary("maps");
+
+      map = new Map(document.getElementById("map"), {
+        center: { lat: 33.9944251, lng:-118.223643},
+        zoom: 10,
+        styles: 
+        [
+            {
+              "featureType": "all",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "hue": "#ff4400"
+                },
+                {
+                  "saturation": -68
+                },
+                {
+                  "lightness": -4
+                },
+                {
+                  "gamma": 0.72
+                }
+              ]
+            },
+            {
+              "featureType": "landscape.man_made",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "hue": "#0077ff"
+                },
+                {
+                  "gamma": 3.1
+                }
+              ]
+            },
+            {
+              "featureType": "poi.park",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "hue": "#44ff00"
+                },
+                {
+                  "saturation": -23
+                }
+              ]
+            },
+            {
+              "featureType": "transit",
+              "elementType": "labels.text.stroke",
+              "stylers": [
+                {
+                  "saturation": -64
+                },
+                {
+                  "hue": "#ff9100"
+                },
+                {
+                  "lightness": 16
+                },
+                {
+                  "gamma": 0.47
+                },
+                {
+                  "weight": 2.7
+                }
+              ]
+            },
+            {
+              "featureType": "transit.line",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "lightness": -48
+                },
+                {
+                  "hue": "#ff5e00"
+                },
+                {
+                  "gamma": 1.2
+                },
+                {
+                  "saturation": -23
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "hue": "#00ccff"
+                },
+                {
+                  "gamma": 0.44
+                },
+                {
+                  "saturation": -33
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "labels.text.fill",
+              "stylers": [
+                {
+                  "hue": "#007fff"
+                },
+                {
+                  "gamma": 0.77
+                },
+                {
+                  "saturation": 65
+                },
+                {
+                  "lightness": 99
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "labels.text.stroke",
+              "stylers": [
+                {
+                  "gamma": 0.11
+                },
+                {
+                  "weight": 5.6
+                },
+                {
+                  "saturation": 99
+                },
+                {
+                  "hue": "#0091ff"
+                },
+                {
+                  "lightness": -86
+                }
+              ]
+            }
+          ]
+      });
+    }
+
+    initMap();
+</script>
 <script src="js/main.min.js"></script>
 </body>
 </html>
