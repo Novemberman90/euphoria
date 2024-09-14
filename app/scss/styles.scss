@@ -57,8 +57,12 @@ border-bottom: 1px solid rgb(190, 188, 189);
   &__search-form {
     display: flex;
     align-items: center;
+    &--style {
+      margin-left: 43px;
+    }
+  }
+  &__search-label {
     width: 267px;
-    margin-left: 43px;
     position: relative;
   }
   &__search-btn {
@@ -2000,4 +2004,5 @@ border-bottom: 1px solid rgb(190, 188, 189);
 @import './checkout';
 @import './empty-cart';
 @import './confirm-order';
+@import './login';
 @import 'media';
