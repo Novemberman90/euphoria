@@ -122,3 +122,108 @@ button {
     color: $accent;
   }
 }
+
+.user-register {
+  &__link {
+    color: $accent;
+    @extend %causten-500;
+    font-size: 18px;
+    line-height: 22px;
+    border-radius: 8px;
+    border: 1px solid $title;
+    padding: 12px 48px 12px 48px;
+    display: inline-flex;
+
+    &:hover {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+      background: $accent;
+      color: $white;
+    }
+
+    &--active {
+      background-color: $accent;
+      color: $white;
+      border: none;
+    }
+
+    &+.user-register__link {
+      margin-left: 30px;
+    }
+  }
+}
+
+.menu-register {
+  max-width: 602px;
+  width: 100%;
+
+  &__form {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__label {
+    width: 184px;
+  }
+
+  .jq-selectbox__select {
+    width: 206px;
+    color: $title;
+    @extend %causten-400;
+    font-size: 18px;
+    line-height: 22px;
+    padding-right: 36px;
+  }
+
+  .jq-selectbox__trigger {
+    border-left: none;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 10px;
+    height: 5px;
+    border: none;
+    background-image: url('../images/langauge-select-icon.svg');
+  }
+
+  .jq-selectbox__dropdown ul {
+    width: 246px;
+    padding-left: 0;
+
+    li {
+      width: 100%;
+      height: 50px;
+      border-radius: 8px;
+      padding: 16px 35px 16px 20px;
+      background: rgb(246, 246, 246);
+      display: inline-flex;
+      align-items: center;
+      color: #807d7e;
+      @extend %causten-400;
+      font-size: 14px;
+      line-height: 17px;
+
+      &+li {
+        margin-top: 5px;
+      }
+
+      &:hover {
+        border: 1px solid rgb(60, 66, 66);
+        border-radius: 8px;
+        background: rgba(102, 32, 193);
+        color: $white;
+      }
+
+      &:focus,
+      &:active {
+        color: $white;
+        border: 1px solid rgb(138, 51, 253);
+        border-radius: 8px;
+        background: rgba(102, 32, 193);
+      }
+    }
+  }
+}

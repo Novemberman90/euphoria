@@ -1,0 +1,238 @@
+.modal {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+  }
+
+  &__img {
+    width: 695px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__content {
+    max-width: 568px;
+    width: 100%;
+    padding-top: 60px;
+  }
+
+  &__title {
+    color: $title;
+    @extend %coreSansC-600;
+    font-size: 34px;
+    line-height: 33px;
+    letter-spacing: 0.02em;
+    margin-bottom: 45px;
+  }
+
+  &__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 58px;
+    border: 1px solid $title;
+    border-radius: 8px;
+    color: $accent;
+    @extend %causten-500;
+    font-size: 22px;
+    line-height: 26px;
+
+    &+.modal__submit {
+      margin-top: 10px;
+    }
+
+    &:hover {
+      background: rgba(102, 32, 193, 0.03);
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid rgb(138, 51, 253);
+      background: rgba(102, 32, 193, 0.03);
+    }
+  }
+
+  &__submit-label {
+    position: relative;
+    padding-left: 32px;
+
+    &--google,
+    &--twitter {
+      &::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--google {
+      &::before {
+        background-image: url('../images/google-icon.svg');
+      }
+    }
+
+    &--twitter {
+      &::before {
+        background-image: url('../images/twitter-icon.svg');
+      }
+    }
+  }
+
+  &__separetor {
+    margin: 50px 0;
+    color: #666666;
+    @extend %coreSansC-500;
+    font-size: 18px;
+    line-height: .1em;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid rgba(102, 102, 102, 0.251);
+  }
+
+  &__separetor-text {
+    padding: 0 25px;
+    background-color: $white;
+  }
+
+  &__field {
+    margin-bottom: 30px;
+  }
+
+  &__field-box {
+    margin-bottom: 30px;
+
+    &+.modal__field-box {
+      margin-bottom: 0;
+    }
+  }
+
+  &__field-label {
+    color: $title;
+    @extend %causten-400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+
+    input {
+      width: 100%;
+      padding: 16px 20px;
+      margin-top: 10px;
+      border: 1px solid $title;
+      border-radius: 8px;
+      outline: none;
+
+      &:focus-visible {
+        border: 1px solid $accent;
+      }
+    }
+  }
+
+  &__field-label-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__password-security {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      color: #807d7e;
+      @extend %causten-400;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: right;
+      margin-left: 15px;
+    }
+
+    svg {
+      path {
+        fill: #807d7e;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      svg {
+        path {
+          fill: $title;
+        }
+      }
+
+      span {
+        color: $title;
+      }
+    }
+  }
+
+  &__password-show {
+    margin-top: 1px;
+  }
+
+  &__password-link {
+    margin-top: 10px;
+    color: $title;
+    @extend %causten-400;
+    font-size: 16px;
+    line-height: 19px;
+    display: block;
+    text-align: right;
+    text-decoration-line: underline;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__form-btn {
+    width: 167px;
+    height: 54px;
+    border-radius: 8px;
+    background: rgb(138, 51, 253);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: $white;
+    @extend %causten-500;
+    font-size: 18px;
+    line-height: 22px;
+
+    &:hover {
+      background-color: #6620c1;
+      box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, .1019607843)
+    }
+
+    :focus {
+      background: #6620c1;
+    }
+  }
+
+  &__form-question {
+    color: $title;
+    @extend %causten-500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__form-question-link {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration-line: underline;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}

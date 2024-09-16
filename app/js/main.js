@@ -1,4 +1,25 @@
 $(function() {
+  /* login / modal */
+/* security-code */
+
+  $('.modal__password-security').on('click', function() {
+    const passwordField = $('#password-login');
+    const passwordFieldType = passwordField.attr('type');
+
+     // Если тип поля пароль, меняем его на текст для показа
+    if (passwordFieldType === 'password') {
+      passwordField.attr('type', 'text');
+      $('.modal__password-hide').hide();
+      $('.modal__password-show').show();
+       // Меняем иконку на "глаз с чертой"
+    } else {
+      passwordField.attr('type', 'password');
+      $('.modal__password-hide').show();
+      $('.modal__password-show').hide();
+       // Меняем иконку обратно на обычный глаз
+    }
+  });
+
   /* checkout page */
 /* security-code */
 $('.payment-method__security-code-open').hide();
@@ -123,7 +144,7 @@ $(function() {
   });
 
 
-    $('.card-product__quantity-input, .delivery-form__postal-select').styler();
+    $('.card-product__quantity-input, .delivery-form__postal-select, .menu-register__langauge-select').styler();
 
 
   /* product-page */
