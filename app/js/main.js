@@ -1,4 +1,22 @@
 $(function() {
+  /* sing up / modal */
+  /* email */
+  $(function(params) {
+    const $emailInput = $('#email');
+    const $errorMessage = $('.modal__user-error');
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    $emailInput.on('blur', function (params) {
+      const emailValue = $emailInput.val().trim();
+      if (emailValue === '') {
+        $errorMessage.show();
+      } else if (!emailPattern.test(emailValue)) {
+        $errorMessage.show();
+      } else {
+        $errorMessage.hide();
+      }
+    });
+  });
+
   /* login / modal */
 /* security-code */
 
