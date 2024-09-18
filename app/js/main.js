@@ -21,7 +21,7 @@ $(function() {
 /* security-code */
 
   $('.modal__password-security').on('click', function() {
-    const passwordField = $('#password-login');
+    const passwordField = $('#password-login, #new-pass');
     const passwordFieldType = passwordField.attr('type');
 
      // Если тип поля пароль, меняем его на текст для показа
