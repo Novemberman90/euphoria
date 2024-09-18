@@ -141,6 +141,23 @@
       }
     }
   }
+  &__user-input {
+    color: #807d7e;
+    @extend %causten-400;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__user-input-reset {
+      color: rgb(138, 51, 253);
+      @extend %causten-500;
+      font-size: 18px;
+      line-height: 22px;
+      &:hover,
+      &:focus-visible {
+        border: 1px solid $accent;
+        background: rgba(102, 32, 193, 0.03);
+      }
+  }
   &__user-error {
     color: #ee1d52;
     @extend %causten-400;
