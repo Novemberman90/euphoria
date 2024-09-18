@@ -3,7 +3,7 @@ $(function() {
   /* email */
   $(function(params) {
     const $emailInput = $('#email');
-    const $errorMessage = $('.modal__user-error');
+    const $errorMessage = $('.modal__user-error-email');
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     $emailInput.on('blur', function (params) {
       const emailValue = $emailInput.val().trim();
