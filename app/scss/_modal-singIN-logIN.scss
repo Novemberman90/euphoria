@@ -166,6 +166,7 @@
     font-size: 14px;
     line-height: 17px;
   }
+
   &__user-input-reset {
       color: rgb(138, 51, 253);
       @extend %causten-500;
@@ -183,12 +184,44 @@
     font-size: 16px;
     line-height: 19px;
   }
+
+  &__verification-box {
+    margin-bottom: 50px;
+  }
+
   &__field-label-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
+  &__verification-label {
+    input {
+      width: 100%;
+      padding: 16px 20px;
+      margin-top: 10px;
+      border: 1px solid $title;
+      border-radius: 8px;
+      outline: none;
+      &:hover,
+      &:focus-visible {
+        border: 1px solid $accent;
+      }
+    }
+  }
+  &__verification-name {
+    color: $title;
+    @extend %causten-400;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+  }
+  &__verification-input-code {
+    color: $title;
+    @extend %causten-500;
+    font-size: 18px;
+    line-height: 22px;
+  }
   &__password-security {
     display: flex;
     align-items: center;
