@@ -24,13 +24,32 @@
     line-height: 33px;
     letter-spacing: 0.02em;
   }
+  &__title-style {
+    margin-bottom: 30px;
+  }
+  &__subtitle,
+  &__subtitle-checkEmail {
+    font-size: 16px;
+    line-height: 19px;
+  }
   &__subtitle {
     color: rgba(102, 102, 102, 0.8);
     @extend %causten-500;
-    font-size: 16px;
-    line-height: 19px;
     margin: 5px 0;
   }
+  &__subtitle-checkEmail {
+    @extend %causten-700;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+    a{
+      color: $accent;
+      @extend %causten-700;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.02em;
+    }
+  }
+
   &__form {
     padding-top: 45px;
   }
@@ -258,6 +277,27 @@
     @extend %causten-500;
     font-size: 16px;
     line-height: 19px;
+  }
+  &__form-question-style {
+    color: #807d7e;
+    position: relative;
+    padding-left: 20px;
+    transition: all .5s;
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/check-email-icon.svg');
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 9px;
+    }
+    &:hover {
+      &::before {
+        left: 5px;
+      }
+    }
   }
 
   &__form-question-link {
