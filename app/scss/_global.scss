@@ -49,6 +49,7 @@ select {
 .title {
   font-size: 28px;
   line-height: 33.5px;
+  letter-spacing: 0.02em;
   @extend %coreSansC-600;
   display: block;
   color: $title;

@@ -1,0 +1,219 @@
+.my-account {
+  padding: 20px 0 100px;
+  &__top-box {
+    margin-bottom: 50px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.account-tabs {
+  width: 304px;
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    color: #807d7e;
+    @extend %coreSansC-500;
+    font-size: 14px;
+    line-height: 33.5px;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+  }
+  &__item {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    width: 295px;
+    height: 44px;
+    padding-left: 37px;
+    display: flex;
+    align-items: center;
+    color: #807d7e;
+    @extend %causten-600;
+    font-size: 18px;
+    line-height: 22px;
+    &:hover {
+      background: rgb(246, 246, 246);
+      position: relative;
+    
+      &::before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 44px;
+        left: 0;
+        background-color: $title;
+      }
+    }
+  }
+  &__link--active {
+    background: rgb(246, 246, 246);
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 44px;
+      left: 0;
+      background-color: $title;
+    }
+  }
+  &__link-img {
+    margin-right: 17px;
+  }
+  &__content {
+    margin-left: 50px;
+    width: 100%;
+  }
+}
+.personal-info {
+  &__title,
+  &__subtitle {
+    color: $title;
+    @extend %coreSansC-600;
+    line-height: 33.5px;
+    letter-spacing: 0.02em;
+  }
+
+  &__title{
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+  &__form {
+    max-width: 894px;
+    width: 100%;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #EDEEF2;
+    padding: 30px 0 25px;
+    margin-bottom: 20px;
+    position: relative;
+    input {
+      width: 80%;
+      border: none;
+      padding: 10px 10px 10px 0;
+      color:$title;
+      @extend %causten-600;
+      font-size: 18px;
+      line-height: 22px;
+      outline: none;
+    }
+  }
+  &__label,
+  &__btn {
+    @extend %causten-600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__label {
+    color: #807d7e;
+    position: absolute;
+    top: 0;
+  }
+  &__btn {
+    color: $title;
+  }
+}
+.personal-adress {
+  &__title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__title {
+    color: $title;
+    @extend %coreSansC-600;
+    font-size: 22px;
+    line-height: 33.5px;
+    letter-spacing: 0.02em;
+  }
+  &__title-link {
+    color: $title;
+    @extend %causten-600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 25px;
+  }
+  &__item {
+    width: 435px;
+    padding: 25px 43px;
+    border-radius: 12px;
+    background: rgb(246, 246, 246);
+  }
+  &__item-title {
+    color: $title;
+    @extend %causten-600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__item-number,
+  &__item-adress,
+  &__tag-box {
+    color: #807d7e;
+    @extend %causten-500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__item-number {
+    margin-bottom: 20px;
+  }
+  &__item-adress {
+    margin-bottom: 23px;
+    font-style:normal;
+  }
+  &__tag-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+    span {
+      border: 1px solid #807d7e;
+      border-radius: 8px;
+      padding: 7px 19px 7px 19px;
+    }
+  }
+
+  &__btns-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    color: $title;
+    @extend %causten-600;
+    font-size: 16px;
+    line-height: 19px;
+    position: relative;
+    & + .personal-adress__btn {
+      padding-left: 21px;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 20px;
+        background: #d9d9d9;
+        left: 10px;
+        top: 0;
+      }
+    }
+  }
+}

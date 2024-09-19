@@ -1,4 +1,40 @@
 $(function() {
+/* my-account */
+// 
+    $(function (params) {
+      let currentlyEditing = null;
+      $('.personal-info__btn').on('click', function() {
+          const $input = $(this).siblings('input');
+          
+          if ($input.prop('readonly')) {
+            // Если input readonly, делаем его редактируемым
+            $input.prop('readonly', false).trigger( "focus" );
+            $input.css('background-color', '#fff');
+            $(this).text('Save'); // Меняем текст кнопки на "Save"
+            currentlyEditing = $input;
+          } else {
+            // Если input редактируемый, возвращаем обратно readonly
+            $input.prop('readonly', true);
+            $input.css('background-color', '#f5f5f5');
+            $(this).text('Change'); // Возвращаем текст кнопки на "Change"
+            currentlyEditing = null;
+          }
+        });
+        
+        $(document).on('click', function(event) {
+        if (currentlyEditing && !$(event.target).closest('.personal-info__item').length) {
+        // Если клик был вне блока с input, блокируем поле
+        currentlyEditing.prop('readonly', true);
+        currentlyEditing.css('background-color', '#f5f5f5');
+        currentlyEditing.siblings('.personal-info__btn').text('Change');
+        currentlyEditing = null;
+        }
+       });
+    });
+  
+
+  
+  
   /* sing up / modal */
   /* email */
   $(function(params) {
