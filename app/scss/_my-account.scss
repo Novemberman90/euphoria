@@ -217,3 +217,144 @@
     }
   }
 }
+.delivery-person {
+  &__costumer,
+  &__region,
+  &__adress,
+  &__postal {
+    label {
+      max-width: 426px;
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+  &__postal {
+    & label:nth-child(-n+3) {
+      max-width: 426px !important;
+      width: 100%;
+    }
+  }
+  .jq-selectbox__select,
+  .jq-selectbox__dropdown ul {
+    width: 426px;
+    li {
+    &:hover {
+        border: 1px solid rgb(60, 66, 66);
+        background: $white;
+      }
+    }
+  }
+  &__instruction {
+    margin-bottom: 30px;
+  }
+  &__instruction-label {
+    color: $title;
+    @extend %causten-600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+  }
+  &__instruction-textarea {
+    max-width: 895px;
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 10px;
+    background-color: #f6f6f6;
+    resize: none;
+    color: #807d7e;
+    @extend %causten-400;
+    font-size: 16px;
+    line-height: 19px;
+    outline: none;
+    &::placeholder {
+      @extend %causten-400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &:hover {
+      border: 1px solid #3c4242;
+      background: rgba(102, 32, 193, .03);
+    }
+    &:focus {
+      border: 1px solid #8a33fd
+    }
+  }
+  &__check-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+  }
+  &__check-label {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__check-input {
+    @extend %checkbox-hidden;
+    &:checked + .delivery-person__check-style {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      background-image: url('../images/checked-box.svg');
+    }
+  }
+  &__check-style {
+    position: absolute;
+    content: '';
+    background-image: url('../images/box-disabled.svg');
+    width: 18px;
+    height: 18px;
+
+    &:hover {
+      background-image: url('../images/box.svg');
+    }
+  }
+  &__check-text {
+    color: $title;
+    @extend %causten-400;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 32px;
+  }
+  &__bottom-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__btn {
+    border-radius: 8px;
+    width: 126px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @extend %causten-400;
+    font-size: 20px;
+    line-height: 24px;
+    &:hover {
+      background-color: #6620C1;
+      box-shadow: 0px 3px 4px 0px #0000001A;
+    }
+  
+    &:focus {
+      background: #6620C1;
+    }
+  }
+  &__btn-save {
+    background-color: #8A33FD;
+    color: $white;
+  }
+  &__btn-cancel {
+    background-color: #F6F6F6;
+    color: #807D7E;
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
