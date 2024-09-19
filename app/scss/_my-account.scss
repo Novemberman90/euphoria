@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between;
   }
+  &__fotter {
+    padding-top: 100px;
+    display: none;
+  }
 }
 .account-tabs {
   width: 304px;
@@ -39,6 +43,7 @@
     line-height: 22px;
     &:hover {
       background: rgb(246, 246, 246);
+      border-radius: 0 8px 8px 0;
       position: relative;
     
       &::before {
@@ -53,6 +58,7 @@
   }
   &__link--active {
     background: rgb(246, 246, 246);
+    border-radius: 0 8px 8px 0;
     position: relative;
     &::before {
       position: absolute;
@@ -69,6 +75,13 @@
   &__content {
     margin-left: 50px;
     width: 100%;
+  }
+  &__content-item {
+    display: none;
+    &--active {
+      display: block;
+      width: 100%;
+    }
   }
 }
 .personal-info {
@@ -356,5 +369,161 @@
     &:focus {
       color: $white;
     }
+  }
+}
+/* wishlist */
+.wishlist {
+  &__title {
+    color: $title;
+    @extend %coreSansC-600;
+    font-size: 28px;
+    line-height: 33.5px;
+    letter-spacing: 0.02em;
+    margin-bottom: 50px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: auto 4fr repeat(2, 1fr);
+    padding-bottom: 30px;
+    border-bottom: 1px solid #edeef2;
+    & > * {
+      align-self: center;
+    }
+  }
+  &__delet-btn {
+    margin-right: 35px;
+  }
+  &__details {
+    display: flex;
+    align-items: center;
+  }
+  &__details-img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+  }
+  &__details-box {
+    margin-left: 35px;
+  }
+  &__details-title,
+  &__color-box,
+  &__quantity-box {
+    color: $title;
+    @extend %causten-700;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  &__color,
+  &__quantity {
+    @extend %causten-500;
+    color: #807D7E;
+  }
+  &__quantity {
+    margin-bottom: 0;
+  }
+  &__cost {
+    color: #807d7e;
+    @extend %causten-700;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.02em;
+  }
+  &__add-btn {
+    width: 144px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: $accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    @extend %causten-500;
+    font-size: 18px;
+    line-height: 22px;
+    &:hover {
+        background-color: #6620C1;
+        box-shadow: 0px 3px 4px 0px #0000001A;
+      }
+    
+      &:focus {
+        background: #6620C1;
+      }
+  }
+}
+.wishlist-empty {
+  display: none;
+  &__container {
+    padding: 78px 117px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.05), -2px -2px 4px 0px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+  &__img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    margin-bottom: 60px;
+  }
+  &__content {
+    text-align: center;
+    width: 460px;
+  }
+
+  &__title {
+    color: $title;
+    @extend %coreSansC-600;
+    font-size: 34px;
+    line-height: 33px;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    color: #807d7e;
+    @extend %causten-500;
+    font-size: 16px;
+    line-height: 1.247;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+  }
+  &__link {
+    border-radius: 8px;
+    background-color: $accent;
+    color: $white;
+    @extend %causten-600;
+    font-size: 18px;
+    line-height: 22px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 246px;
+    height: 46px;
+    &:hover {
+      background-color: #6620C1;
+      box-shadow: 0px 3px 4px 0px #0000001A;
+    }
+  
+    &:focus {
+      background: #6620C1;
+    }
+  }
+}
+/* recently */
+.recently {
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }

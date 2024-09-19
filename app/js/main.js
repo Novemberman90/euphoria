@@ -1,6 +1,12 @@
 $(function() {
 /* my-account */
-// 
+
+//wishlist 
+  $('.wishlist__delet-btn').on('click', function() {
+    $(this).closest('.wishlist__item').remove(); // Удаляем карточку
+  });
+
+// personal-adress
     $(function (params) {
       let currentlyEditing = null;
       $('.personal-info__btn').on('click', function() {
