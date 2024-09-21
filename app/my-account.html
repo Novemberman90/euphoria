@@ -99,7 +99,7 @@
               </a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
+              <a class="breadcrumbs__link breadcrumbs__link-curent" href="#">
                 Personal Info
               </a>
             </li>
@@ -113,22 +113,23 @@
           <div class="account-tabs__tabs">
             <ul class="account-tabs__list">
               <li class="account-tabs__item">
-                <a class="account-tabs__link" href="#tabs-1"><img class="account-tabs__link-img" src="./images/my-orders-icon.svg" alt="my orders icon">My orders</a>
+                <a class="account-tabs__link account-tabs__link--active" href="#tabs-1" data-breadcrumb="My orders"><img class="account-tabs__link-img" src="./images/my-orders-icon.svg" alt="my orders icon">My orders</a>
               </li>
               <li class="account-tabs__item">
-                <a class="account-tabs__link" href="#tabs-2"><img class="account-tabs__link-img" src="./images/heart.svg" alt="heart icon"> Wishlist</a>
+                <a class="account-tabs__link" href="#tabs-2" data-breadcrumb="Wishlist"><img class="account-tabs__link-img" src="./images/heart.svg" alt="heart icon"> Wishlist</a>
               </li>
               <li class="account-tabs__item">
-                <a class="account-tabs__link account-tabs__link--active" href="#tabs-3"><img class="account-tabs__link-img" src="./images/user.svg" alt="user icon">My info</a>
+                <a class="account-tabs__link" href="#tabs-3" data-breadcrumb="My info"><img class="account-tabs__link-img" src="./images/user.svg" alt="user icon">My info</a>
               </li>
               <li class="account-tabs__item">
-                <a class="account-tabs__link" href="#tabs-4"><img class="account-tabs__link-img" src="./images/sign-out-icon.svg" alt="Sign out icon">Sign out</a>
+                <a class="account-tabs__link" href="#tabs-4" data-breadcrumb="Sign out"><img class="account-tabs__link-img" src="./images/sign-out-icon.svg" alt="Sign out icon">Sign out</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="account-tabs__content">
-          <div class="account-tabs__content-item account-tabs__content-item--active" id="tabs-2">
+          <div class="account-tabs__content-item account-tabs__content-item--active" id="tabs-1"></div>
+          <div class="account-tabs__content-item" id="tabs-2">
             <div class="wishlist">
               <h2 class="wishlist__title">Wishlist</h2>
               <div class="wishlist__inner">
@@ -218,7 +219,7 @@
                 </div>
               </div>
             </div>
-            <div class="wishlist-empty">
+            <div class="wishlist-empty" style="display: none;">
               <div class="wishlist-empty__container">
                 <img class="wishlist-empty__img" src="./images/wishlist-empty.svg" alt="wishlist empty images">
                 <div class="wishlist-empty__content">
@@ -261,7 +262,7 @@
               <div class="personal-adress">
                 <div class="personal-adress__title-box">
                   <h3 class="personal-adress__title">Address</h3>
-                  <a class="personal-adress__title-link" href="#">Add New</a>
+                  <a class="personal-adress__title-link" href="./delivery-adress.html">Add New</a>
                 </div>
                 <div class="personal-adress__inner">
                   <div class="personal-adress__item">
@@ -334,7 +335,7 @@
           </div>
         </div>
       </div>
-      <div class="my-account__fotter">
+      <div class="my-account__fotter" style="display: none;">
         <div class="recently">
           <h2 class="recently__title title">Recently Viewed</h2>
           <div class="recently__inner">

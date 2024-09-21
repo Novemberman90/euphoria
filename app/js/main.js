@@ -2,9 +2,55 @@ $(function() {
 /* my-account */
 
 //wishlist 
+
+  function updateWishlist() {
+  const wishlistItems = $('.wishlist__item');
+
+  if (wishlistItems.length === 0) {
+    $('.wishlist-empty').show();
+    $('.my-account__fotter').show();
+    $('.account-tabs__link.account-tabs__link--active').toggleClass('account-tabs__show-footer');
+  } else {
+    $('.wishlist-empty').hide();
+    $('.my-account__fotter').hide();
+    $('.account-tabs__link').removeClass('account-tabs__show-footer');
+  }
+}
   $('.wishlist__delet-btn').on('click', function() {
-    $(this).closest('.wishlist__item').remove(); // Удаляем карточку
+    $(this).closest('.wishlist__item').remove();
+    updateWishlist();
   });
+  updateWishlist();
+  
+// tabs item 
+function showMyAccontFooter(element) {
+
+  if(element.hasClass('account-tabs__link')&&element.hasClass('account-tabs__link--active')&&element.hasClass('account-tabs__show-footer')) {
+    $('.my-account__fotter').show();
+    } else {
+      $('.my-account__fotter').hide();
+    }
+}
+
+$('.account-tabs__link').on('click', function(e) {
+  e.preventDefault();
+  $('.account-tabs__link').removeClass('account-tabs__link--active');
+  $(this).addClass('account-tabs__link--active');
+
+  $('.account-tabs__content-item').removeClass('account-tabs__content-item--active');
+  $($(this).attr('href')).addClass('account-tabs__content-item--active');
+
+  const breadcrumb = $(this).data('breadcrumb');
+  $('.breadcrumbs__link-curent').text(breadcrumb);
+
+  
+
+  let clickedElement = $(this);
+  showMyAccontFooter(clickedElement);
+});
+ showMyAccontFooter($('.account-tabs__link.account-tabs__link--active'));
+
+
 
 // personal-adress
     $(function (params) {
