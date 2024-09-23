@@ -525,3 +525,144 @@
     justify-content: space-between;
   }
 }
+.my-orders {
+  &__title {
+    color: $title;
+    @extend %coreSansC-600;
+    font-size: 28px;
+    line-height: 33.5px;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+  }
+}
+.my-orders-tabs {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #f6f6f6;
+    margin-bottom: 50px;
+    @extend %coreSansC-500;
+    font-size: 22px;
+    line-height: 33.5px;
+    letter-spacing: 0.02em;
+  }
+  &__item {
+    color: $title;
+    width: 176px;
+    height: 55px;
+    padding: 12px 53px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+       background: #f6f6f6;
+       position: relative;
+       border-radius: 8px;
+      &::before {
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $title;
+      }
+    }
+    &--active {
+      background: #f6f6f6;
+      border-radius: 8px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $title;
+      }
+    }
+  }
+}
+.active-order {
+  &__item {
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+  &__info {
+    padding: 28px 47px;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    margin-bottom: 33px;
+  }
+  &__number-box {
+    color: $title;
+    @extend %causten-600;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  &__number {
+    margin-left: 5px;
+  }
+  &__info-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
+    div:nth-child(2n) {
+      text-align: right;
+    }
+  }
+  &__order-data,
+  &__estimated-delivDate,
+  &__order-status,
+  &__payment-method {
+    color: #807D7E;
+    @extend %causten-600;
+    font-size: 14px;
+    line-height: 17px;
+    span {
+      @extend %causten-400;
+      color: #BEBCBD;
+      padding-left: 3px;
+    }
+  }
+  &__card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__details-box {
+    margin-left: 25px;
+    color: $title;
+    @extend %causten-600;
+  }
+  &__details-img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+  }
+  &__details-title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
+  &__color-box,
+  &__quantity-box {
+    @extend %causten-600;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 10px;
+    span {
+      color:#BEBCBD;
+    }
+  }
+  &__total-box {
+    font-size: 14px;
+    line-height: 17px;
+    color: #BEBCBD;
+  }
+}
