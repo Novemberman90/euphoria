@@ -100,7 +100,7 @@
             </li>
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link breadcrumbs__link-curent" href="#">
-                Personal Info
+                Order Details
               </a>
             </li>
           </ul>
@@ -129,167 +129,104 @@
         </div>
         <div class="account-tabs__content">
           <div class="account-tabs__content-item account-tabs__content-item--active" id="tabs-1">
-            <div class="my-orders">
-              <h2 class="my-orders__title">My Orders</h2>
-              <div class="my-orders-tabs">
-                <div class="my-orders-tabs__top">
-                  <a class="my-orders-tabs__item my-orders-tabs__item--active" href="#active">Active</a>
-                  <a class="my-orders-tabs__item" href="#cancelled">Cancelled</a>
-                  <a class="my-orders-tabs__item" href="#completed">Completed</a>
-                </div>
-              </div>
-              <div class="my-orders-tabs__content">
-                <div class="my-orders-tabs__content-item my-orders-tabs__content-item--active" id="active">
-                  <div class="active-order">
-                    <div class="active-order__item">
-                      <div class="active-order__info">
-                        <div class="active-order__number-box">
-                          Order no: <span class="active-order__number">#123456789</span>
-                        </div>
-                        <div class="active-order__info-box">
-                          <div class="active-order__order-data">
-                            Order Date :<span class="active-order__order-day">2</span>
-                            <span class="active-order__order-months">June</span>
-                            <span class="active-order__order-year">2023</span>
-                            <span class="active-order__order-hour">2</span>
-                            :<span class="active-order__order-min">40</span>
-                            <span class="active-order__order-vartime">PM</span>
-                          </div>
-                          <div class="active-order__order-status">
-                            Order Status :<span class="active-order__status">Inprogress</span>
-                          </div>
-                          <div class="active-order__estimated-delivDate">
-                            Estimated Delivery Date : <span class="active-order__estimated-day">8</span>
-                            <span class="active-order__estimated-month">June</span>
-                            <span class="active-order__estimated-year">2023</span>
-                          </div>
-                          <div class="active-order__payment-method">
-                            Payment Method : <span class="active-order__method">Cash on delivery</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="wishlist__item active-order__card-item">
-                        <div class="wishlist__details active-order__details">
-                          <img class="active-order__details-img" src="./images/active-order-1.avif" alt="wishlist image">
-                          <div class="active-order__details-box">
-                            <h4 class="active-order__details-title">Blue Flower Print Crop Top</h4>
-                            <div class="wishlist__color-box active-order__color-box">
-                              Color : <span class="wishlist__color active-order__color">Yellow</span>
-                            </div>
-                            <div class="wishlist__quantity-box active-order__quantity-box">
-                              Qty : <span class="wishlist__quantity active-order__quantity">1</span>
-                            </div>
-                            <div class="active-order__total-box">
-                              Total : <span class="active-order__total">$23.00</span>
-                            </div>
-                          </div>
-                        </div>
-                        <a class="wishlist__add-btn active-order__btn" href="./order-details.html">View Detail</a>
-                      </div>
-                    </div>
-                    <div class="active-order__item">
-                      <div class="active-order__info">
-                        <div class="active-order__number-box">
-                          Order no: <span class="active-order__number">#123456789</span>
-                        </div>
-                        <div class="active-order__info-box">
-                          <div class="active-order__order-data">
-                            Order Date :<span class="active-order__order-day">2</span>
-                            <span class="active-order__order-months">June</span>
-                            <span class="active-order__order-year">2023</span>
-                            <span class="active-order__order-hour">2</span>
-                            :<span class="active-order__order-min">40</span>
-                            <span class="active-order__order-vartime">PM</span>
-                          </div>
-                          <div class="active-order__order-status">
-                            Order Status :<span class="active-order__status">Inprogress</span>
-                          </div>
-                          <div class="active-order__estimated-delivDate">
-                            Estimated Delivery Date : <span class="active-order__estimated-day">8</span>
-                            <span class="active-order__estimated-month">June</span>
-                            <span class="active-order__estimated-year">2023</span>
-                          </div>
-                          <div class="active-order__payment-method">
-                            Payment Method : <span class="active-order__method">Cash on delivery</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="wishlist__item active-order__card-item">
-                        <div class="wishlist__details active-order__details">
-                          <img class="active-order__details-img" src="./images/active-order-2.avif" alt="wishlist image">
-                          <div class="active-order__details-box">
-                            <h4 class="active-order__details-title">Printed blue & white Cote</h4>
-                            <div class="wishlist__color-box active-order__color-box">
-                              Color : <span class="wishlist__color active-order__color">White</span>
-                            </div>
-                            <div class="wishlist__quantity-box active-order__quantity-box">
-                              Qty : <span class="wishlist__quantity active-order__quantity">1</span>
-                            </div>
-                            <div class="active-order__total-box">
-                              Total : <span class="active-order__total">$143.00</span>
-                            </div>
-                          </div>
-                        </div>
-                        <a class="wishlist__add-btn active-order__btn" href="./order-details.html">View Detail</a>
-                    </div>
-                  </div>
-                  <div class="active-order__item">
-                    <div class="active-order__info">
-                      <div class="active-order__number-box">
+            <div class="order-details">
+              <a class="order-details__title" href="./my-account.html#active">Order Details</a>
+
+              <div class="order-details__content">
+                <div class="order-details__item">
+                  <div class="active-order__info order-details__info">
+                    <div class="order-details__info-box">
+                      <div class="active-order__number-box order-details__number-box">
                         Order no: <span class="active-order__number">#123456789</span>
                       </div>
-                      <div class="active-order__info-box">
-                        <div class="active-order__order-data">
-                          Order Date :<span class="active-order__order-day">2</span>
-                          <span class="active-order__order-months">June</span>
-                          <span class="active-order__order-year">2023</span>
-                          <span class="active-order__order-hour">2</span>
-                          :<span class="active-order__order-min">40</span>
-                          <span class="active-order__order-vartime">PM</span>
-                        </div>
-                        <div class="active-order__order-status">
-                          Order Status :<span class="active-order__status">Inprogress</span>
-                        </div>
-                        <div class="active-order__estimated-delivDate">
-                          Estimated Delivery Date : <span class="active-order__estimated-day">8</span>
-                          <span class="active-order__estimated-month">June</span>
-                          <span class="active-order__estimated-year">2023</span>
-                        </div>
-                        <div class="active-order__payment-method">
-                          Payment Method : <span class="active-order__method">Cash on delivery</span>
+                      <div class="active-order__order-data">
+                        Place On :<span class="active-order__order-day">2</span>
+                        <span class="active-order__order-months">June</span>
+                        <span class="active-order__order-year">2023</span>
+                        <span class="active-order__order-hour">2</span>
+                        :<span class="active-order__order-min">40</span>
+                        <span class="active-order__order-vartime">PM</span>
+                      </div>
+                    </div>
+                    <div class="order-details__item-total">Total :
+                      <span class="order-details__sum-total">$143.00</span>
+                    </div>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-bar__step progress-bar__completed-almost progress-bar__completed-done">
+                      <div class="progress-bar__circle"></div>
+                      <span class="progress-bar__label">Order Placed</span>
+                    </div>
+                    <div class="progress-bar__step progress-bar__completed-almost progress-bar__completed-done">
+                      <div class="progress-bar__circle"></div>
+                      <span class="progress-bar__label">In Progress</span>
+                    </div>
+                    <div class="progress-bar__step progress-bar__completed-almost">
+                      <div class="progress-bar__circle"></div>
+                      <span class="progress-bar__label">Shipped</span>
+                    </div>
+                    <div class="progress-bar__step">
+                      <div class="progress-bar__circle"></div>
+                      <span class="progress-bar__label">Delivered</span>
+                    </div>
+                  </div>
+                  <div class="order-details__status-box">
+                    <span class="order-details__status-decor"></span>
+                    <div class="order-details__status-date">
+                      <span class="order-details__status-day">8</span>
+                      <span class="order-details__status-month">June</span>
+                      <span class="order-details__status-year">2023</span>
+                      <span class="order-details__status-hour">3</span>:<span class="order-details__status-min">40</span>
+                      <span class="order-details__status-vartime">PM</span>
+                    </div>
+                    <p class="order-details__status-text">
+                      Your order has been successfully verified.
+                    </p>
+                  </div>
+                </div>
+                <div class="order-details__item-box">
+                  <div class="order-details__item-cart">
+                    <div class="wishlist__details order-details__details">
+                      <img class="order-details__details-img" src="./images/active-order-2.avif" alt="wishlist image">
+                      <div class="wishlist__details-box">
+                        <h4 class="wishlist__details-title">Printed white cote</h4>
+                        <div class="wishlist__color-box">
+                          Color : <span class="wishlist__color">White</span>
                         </div>
                       </div>
                     </div>
-                    <div class="wishlist__item active-order__card-item">
-                      <div class="wishlist__details active-order__details">
-                        <img class="active-order__details-img" src="./images/active-order-1.avif" alt="wishlist image">
-                        <div class="active-order__details-box">
-                          <h4 class="active-order__details-title">Blue Shirt</h4>
-                          <div class="wishlist__color-box active-order__color-box">
-                            Color : <span class="wishlist__color active-order__color">Blue</span>
-                          </div>
-                          <div class="wishlist__quantity-box active-order__quantity-box">
-                            Qty : <span class="wishlist__quantity active-order__quantity">1</span>
-                          </div>
-                          <div class="active-order__total-box">
-                            Total : <span class="active-order__total">$93.00</span>
-                          </div>
+                    <div class="order-details__qty-box">
+                      Qty : <span class="order-details__qty">1</span>
+                    </div>
+                    <div class="order-details__cost">$29.00</div>
+                    <button class="order-details__delet-btn">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 4L4 18M18 18L4 4.00001" stroke="#3C4242" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="order-details__item-cart">
+                    <div class="wishlist__details order-details__details">
+                      <img class="order-details__details-img" src="./images/active-order-3.avif" alt="wishlist image">
+                      <div class="wishlist__details-box">
+                        <h4 class="wishlist__details-title">Men Blue Shirt</h4>
+                        <div class="wishlist__color-box">
+                          Color : <span class="wishlist__color">Blue</span>
                         </div>
                       </div>
-                      <a class="wishlist__add-btn active-order__btn" href="./order-details.html">View Detail</a>
                     </div>
+                    <div class="order-details__qty-box">
+                      Qty : <span class="order-details__qty">1</span>
+                    </div>
+                    <div class="order-details__cost">$29.00</div>
+                    <button class=" order-details__delet-btn">
+                      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 4L4 18M18 18L4 4.00001" stroke="#3C4242" stroke-width="1.5" stroke-linecap="round" />
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <div class="my-orders-tabs__content-item" id="cancelled">
-                  <div class="cancelled">
-                    Cancelled content
-                  </div>
-                </div>
-                <div class="my-orders-tabs__content-item" id="completed">
-                  <div class="completed">
-                    Completed content
-                  </div>
-                </div>
+
               </div>
             </div>
 

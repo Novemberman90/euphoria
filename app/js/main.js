@@ -1,5 +1,10 @@
 $(function() {
 /* my-account */
+//order-details
+
+  $('.order-details__delet-btn').on('click', function() {
+    $(this).closest('.order-details__item-cart').remove();
+  });
 
 //wishlist 
 
@@ -253,14 +258,14 @@ $(function() {
     $('.card-product__quantity-input, .delivery-form__postal-select, .menu-register__langauge-select').styler();
 
 
-  /* product-page */
-    $('.product-tabs__top-item').on('click', function(e) {
+  /* product-page & my-orders-tabs */
+    $('.product-tabs__top-item, .my-orders-tabs__item').on('click', function(e) {
       e.preventDefault();
-      $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
-      $(this).addClass('product-tabs__top-item--active');
+      $('.product-tabs__top-item, .my-orders-tabs__item').removeClass('product-tabs__top-item--active, my-orders-tabs__item--active');
+      $(this).addClass('product-tabs__top-item--active, my-orders-tabs__item--active');
 
-      $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
-      $($(this).attr('href')).addClass('product-tabs__content-item--active');
+      $('.product-tabs__content-item, .my-orders-tabs__content-item').removeClass('product-tabs__content-item--active, my-orders-tabs__content-item--active');
+      $($(this).attr('href')).addClass('product-tabs__content-item--active, my-orders-tabs__content-item--active');
     });
 
     $('.product-slide__thumb').slick({
