@@ -594,6 +594,8 @@
 .active-order {
   &__item {
     margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #edeef2;
     &:last-of-type {
       margin-bottom: 0;
     }

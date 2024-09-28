@@ -1564,6 +1564,14 @@ border-bottom: 1px solid rgb(190, 188, 189);
       top: 50%;
       transform: translateY(-50%);
     }
+    &:hover {
+      background-color: #6620c1;
+      box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, .1019607843)
+    }
+
+    :focus {
+      background: #6620c1;
+    }
   }
   &__btn-price {
     @extend %causten-700;

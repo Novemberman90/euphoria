@@ -1,10 +1,36 @@
 $(function() {
 /* my-account */
+
 //order-details
+  $('.active-order__btn').on('click', function(e) {
+    e.preventDefault();
+    $('.order-details').show();
+    $('.my-orders').hide();
+     const breadcrumb = $(this).data('breadcrumb');
+  $('.breadcrumbs__link-curent').text(breadcrumb);
+  });
+  $('.order-details__title').on('click', function(e) {
+    e.preventDefault();
+    $('.order-details').hide();
+    $('.my-orders').show();
+     const breadcrumb = $(this).data('breadcrumb');
+  $('.breadcrumbs__link-curent').text(breadcrumb);
+  });
 
   $('.order-details__delet-btn').on('click', function() {
     $(this).closest('.order-details__item-cart').remove();
   });
+
+
+    // my-orders-tabs 
+    $('.my-orders-tabs__item').on('click', function(e) {
+      e.preventDefault();
+      $('.my-orders-tabs__item').removeClass('my-orders-tabs__item--active');
+      $(this).addClass('my-orders-tabs__item--active');
+
+      $('.my-orders-tabs__content-item').removeClass('my-orders-tabs__content-item--active');
+      $($(this).attr('href')).addClass('my-orders-tabs__content-item--active');
+    });
 
 //wishlist 
 
@@ -56,6 +82,21 @@ $('.account-tabs__link').on('click', function(e) {
  showMyAccontFooter($('.account-tabs__link.account-tabs__link--active'));
 
 
+
+// My Info change section
+$('.personal-adress__title-link').on('click', function(e) {
+  e.preventDefault();
+  $(this).closest('.personal-info').hide().siblings().show();
+
+  const breadcrumb = $(this).data('breadcrumb');
+  $('.breadcrumbs__link-curent').text(breadcrumb);
+});
+$('.delivery-person__btn').on('click', function() {
+  $(this).closest('.personal-info').hide().siblings().show();
+  
+  const breadcrumb = $(this).data('breadcrumb');
+  $('.breadcrumbs__link-curent').text(breadcrumb);
+});
 
 // personal-adress
     $(function (params) {
@@ -258,14 +299,14 @@ $(function() {
     $('.card-product__quantity-input, .delivery-form__postal-select, .menu-register__langauge-select').styler();
 
 
-  /* product-page & my-orders-tabs */
-    $('.product-tabs__top-item, .my-orders-tabs__item').on('click', function(e) {
+  /* product-page */
+    $('.product-tabs__top-item').on('click', function(e) {
       e.preventDefault();
-      $('.product-tabs__top-item, .my-orders-tabs__item').removeClass('product-tabs__top-item--active, my-orders-tabs__item--active');
-      $(this).addClass('product-tabs__top-item--active, my-orders-tabs__item--active');
+      $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
+      $(this).addClass('product-tabs__top-item--active');
 
-      $('.product-tabs__content-item, .my-orders-tabs__content-item').removeClass('product-tabs__content-item--active, my-orders-tabs__content-item--active');
-      $($(this).attr('href')).addClass('product-tabs__content-item--active, my-orders-tabs__content-item--active');
+      $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+      $($(this).attr('href')).addClass('product-tabs__content-item--active');
     });
 
     $('.product-slide__thumb').slick({
