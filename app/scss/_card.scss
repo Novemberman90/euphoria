@@ -207,16 +207,19 @@
   }
 
   &__discount-out {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 232px;
+    height: 43px;
     @extend %causten-600;
     font-size: 16px;
     line-height: 19px;
     color: $title;
-    width: 232px;
-    height: 43px;
     text-align: center;
     border: 1px solid #bebcbd;
     border-radius: 8px;
-
+  
     &:hover {
       color: #8A33FD;
       background: #6620C108;
