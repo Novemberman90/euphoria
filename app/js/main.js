@@ -239,21 +239,33 @@ $(function() {
     let subTotalText = $(this).find('.card-product__subtotal').text();
     let subtotal = parseFloat(subTotalText.replace('$', ''));
 
-    if(!isNaN(subtotal)) {
-      total += subtotal;
-    }
+        if(!isNaN(subtotal)) {
+          total += subtotal;
+        }
+     });
 
     let discountTotal = total - discount; // Применяем фиксированную скидку
     if (discountTotal < 0) {
       discountTotal = 0; // Не допускаем отрицательную сумму
     }
+    
+    if ($('.card-product__item').length === 0) {
+      // Если карточек нет, ставим обе суммы в $0.00
+      $('.cart-footer__subtotal').text('$0.00');
+      $('.cart-footer__grandtotal').text('$0.00');
+    } else {
+      // Иначе выводим рассчитанные значения
+      $('.cart-footer__subtotal').text('$' + discountTotal.toFixed(2));
+      $('.cart-footer__grandtotal').text('$' + total.toFixed(2));
+    }
 
-    $('.cart-footer__subtotal').text('$' + discountTotal.toFixed(2));
-    $('.cart-footer__grandtotal').text('$' + total.toFixed(2));
-   });
+   /*  $('.cart-footer__subtotal').text('$' + discountTotal.toFixed(2));
+    $('.cart-footer__grandtotal').text('$' + total.toFixed(2)); */
+  
 
      // Обновление суммы при изменении количества
     }
+    
     $('.card-product__quantity-input input').on('input', function () {
     updateSubtotal($(this).closest('.card-product__item'));
     });

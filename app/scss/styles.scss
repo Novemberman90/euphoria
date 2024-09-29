@@ -977,6 +977,16 @@ border-bottom: 1px solid rgb(190, 188, 189);
     cursor: pointer;
     border: 1px solid rgba(190, 188, 189, .4);
     border-top: none;
+    &:hover {
+      .filter__title {
+        color: $title;
+        }
+      svg {
+        path {
+          stroke: $title;
+        }
+      }
+    }
   }
   &__title-box {
     border-bottom: 1px solid rgba(190, 188, 189, .4);
@@ -993,6 +1003,18 @@ border-bottom: 1px solid rgb(190, 188, 189);
         transform: rotate(180deg);
       }
     }
+    &:hover {
+     .filter__title {
+      color: $title;
+     }
+      span {
+        svg {
+          path {
+            stroke: $title;
+          }
+        }
+      }
+     }
     }
     
   &__title {
@@ -1021,6 +1043,14 @@ border-bottom: 1px solid rgb(190, 188, 189);
     font-size: 16px;
     line-height: 19px;
     color: $text;
+    &:hover {
+      color: $title;
+      svg {
+        path {
+          stroke: $title;
+        }
+      }
+    }
   }
 }
 .filter-price {
@@ -1330,6 +1360,14 @@ border-bottom: 1px solid rgb(190, 188, 189);
     font-size: 16px;
     line-height: 19px;
     color: $text;
+    &:hover {
+      color: $title;
+      svg {
+        path {
+          stroke: $title;
+        }
+      }
+    }
   }
 }
 .shop-content {
