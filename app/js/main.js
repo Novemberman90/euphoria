@@ -248,7 +248,7 @@ $(function() {
     if (discountTotal < 0) {
       discountTotal = 0; // Не допускаем отрицательную сумму
     }
-    
+
     if ($('.card-product__item').length === 0) {
       // Если карточек нет, ставим обе суммы в $0.00
       $('.cart-footer__subtotal').text('$0.00');
@@ -308,7 +308,7 @@ $(function() {
   });
 
 
-    $('.card-product__quantity-input, .delivery-form__postal-select, .menu-register__langauge-select').styler();
+    $('.card-product__quantity-input, .delivery-form__postal-select, .header-register__langauge-select').styler();
 
 
   /* product-page */
