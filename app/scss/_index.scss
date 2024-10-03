@@ -1,5 +1,5 @@
 .top-slider {
-  padding: 0;
+  padding-bottom: 50px;
 
   &__inner {
     position: relative;
@@ -27,7 +27,7 @@
   .slick-dots {
     display: flex;
     justify-content: center;
-    margin-top: -50px;
+    margin-top: -60px;
 
     & li:first-child {
       button {
