@@ -401,6 +401,9 @@
   .menu {
     order: 1;
     margin-left: 20px;
+    ul.menu__list {
+      padding: 10px 0;
+    }
     &__list {
       transform: translateX(-200%);
       position: absolute;

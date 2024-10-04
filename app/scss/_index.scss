@@ -1,6 +1,4 @@
 .top-slider {
-  padding-bottom: 50px;
-
   &__inner {
     position: relative;
   }
@@ -27,7 +25,10 @@
   .slick-dots {
     display: flex;
     justify-content: center;
-    margin-top: -60px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 
     & li:first-child {
       button {
@@ -91,10 +92,10 @@
 
   &__content {
     text-align: left;
-    width: 440px;
+    max-width: 440px;
+    width: 100%;
+    padding: 131px 0;
     margin-left: 193px;
-    margin-top: 130px;
-    margin-bottom: 132px;
   }
 
   &__toptitle {
@@ -762,6 +763,92 @@
           background: #3c4242;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1019px) {
+  .top-slider {
+    &__content {
+      margin-left: 120px;
+    }
+  } 
+}
+
+@media (max-width: 928px) {
+  .top-slider {
+    &__item {
+      background-position: left;
+    }
+    &__content {
+     margin: 0 auto;
+     text-align: center;
+    }
+  }
+}
+@media (max-width: 748px) {
+  .top-slider {
+    &__content {
+      margin: 0 auto;
+    }
+    .slick-next {
+      right: 30px;
+    }
+
+    .slick-prev {
+      left: 30px;
+    }
+  }
+}
+@media (max-width: 628px) {
+  .top-slider {
+    &__content {
+      padding: 70px 0 100px;
+    }
+    &__title {
+      font-size: 60px;
+    }
+    &__toptitle,
+    &__subtitle,
+    &__title {
+      line-height: 1.4;
+      margin-bottom: 30px;
+    }
+
+    .slick-arrow {
+      display: none !important;
+    }
+  }
+}
+@media (max-width: 439px) {
+  .top-slider {
+    &__toptitle,
+    &__subtitle,
+    &__title {
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+    &__toptitle,
+    &__subtitle {
+      font-size: 28px;
+    }
+    &__link {
+      padding: 12px 30px;
+    }
+  }
+}
+@media (max-width: 370px) {
+  .top-slider {
+    &__title {
+      font-size: 52px;
+    }
+    &__toptitle,
+    &__subtitle {
+      font-size: 24px;
+    }
+
+    &__link {
+      padding: 12px 30px;
     }
   }
 }
