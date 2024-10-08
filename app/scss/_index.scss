@@ -220,11 +220,11 @@
 
   &__slider {
     padding: 0 38px;
-    min-width: 0;
+    width: 100%;
     position: relative;
   }
   .slick-slide {
-    width: auto;
+    width: 264px;
     margin: 0 18px;
   }
 
@@ -246,12 +246,11 @@
   }
 
   &__item {
-    width: 100%;
-
+    width: 264px !important;
   }
 
   &__img-box {
-    width: 100%;
+    width: 264px;
     height: 264px;
     margin-bottom: 35px;
   }
@@ -291,6 +290,8 @@
     background-position: center center;
     height: 393px;
     width: 610px;
+    border-radius: 12px;
+    padding: 20px 0;
 
     &:nth-child(-n+3) {
       width: 400px;
@@ -312,6 +313,9 @@
         align-items: flex-end;
         margin-left: auto;
       }
+    }
+    &--cargo {
+      padding-right: 10px;
     }
 
     &--hawaiian,
@@ -354,7 +358,7 @@
   }
 
   &__content-label {
-    margin-top: 35px;
+    margin-top: 15px;
     @extend %causten-700;
     font-size: 12px;
     line-height: 14px;
@@ -371,8 +375,8 @@
     margin-bottom: 10px;
     @extend %coreSansC-600;
     font-size: 28px;
-    line-height: 38.43px;
-    letter-spacing: 2%;
+    line-height: 38px;
+    letter-spacing: 0.02em;
   }
 
   &__content-text {
@@ -402,11 +406,9 @@
 
   &__content-link {
     @extend %causten-500;
-    width: 112px;
-    height: 34px;
     font-size: 12px;
     line-height: 14px;
-    padding: 16px 8px 16px 8px;
+    padding: 8px 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -416,7 +418,7 @@
 
   &__inner-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__banner {
@@ -427,10 +429,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 12px 0 0 12px;
+    padding: 10px;
   }
 
   &__banner-box {
-    width: 466px;
+    max-width: 466px;
+    width: 100%;
   }
 
   &__banner-title {
@@ -462,10 +467,11 @@
     border-radius: 8px;
   }
 
-  &__inner-bottom-img {
+  &__banner-img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 0 12px 12px 0;
   }
 }
 
@@ -766,26 +772,83 @@
     }
   }
 }
-@media (max-width: 1439px) {
+/* @media (max-width: 1439px) {
   .arrival {
     &__slider {
       width: 982px;
     }
   }
-}
+} */
 @media (max-width: 1420px) {
   .deals {
     &__inner {
       justify-content: space-around;
     }
+  }
+}
+@media (max-width: 1340px) {
+  .savingzone{
+    &__inner-top {
+      justify-content: center;
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .savingzone {
     &__item {
       width: 520px;
+    &:nth-child(-n+3) {
+        width: 340px;
+      }
+    }
+  };
+}
+@media (max-width: 1250px) {
+  .deals {
+    &__item {
+      width: 520px;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 1.4;
+    }
+  }
+  .savingzone {
+    &__banner-img {
+      width: 50%;
     }
   }
 }
 @media (max-width: 1100px) {
   .deals {
-    display: none;
+    padding-top: 100px;
+    &__item {
+      width: 480px;
+      height: 326px;
+    }
+    &__title {
+      font-size: 28px;
+    }
+  }
+  .savingzone {
+    &__item {
+      width: 610px;
+
+      &:nth-child(-n+3) {
+        width: 610px;
+        background-position: top;
+      }
+    }
+    &__banner-box {
+      width: 80%;
+    }
+    &__banner-title {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+    &__banner-text {
+      font-size: 16px;
+    }
   }
 }
 @media (max-width: 1019px) {
@@ -794,9 +857,28 @@
       margin-left: 120px;
     }
   } 
+  .deals {
+    &__inner {
+      gap: 30px;
+    }
+    &__item {
+      max-width: 605px;
+      width: 100%;
+      height: 356px;
+    }
+  }
+}
+@media (max-width: 960px) {
   .arrival {
-    &__slider {
-      width: 642px;
+    &__item {
+      width: 100% !important;
+    }
+    &__img-box {
+      width: auto;
+      height: auto;
+    }
+    .slick-slide {
+      width: auto;
     }
   }
 }
@@ -811,6 +893,37 @@
     }
   }
 }
+@media (max-width: 861px) {
+  .arrival {
+    .slick-slider {
+      width: 642px;
+    }
+    &__item {
+      width: 264px !important;
+    }
+
+    &__img-box {
+      width: 100%;
+      height: auto;
+    }
+
+    .slick-slide {
+      width: 264px !important;
+    }
+  }
+  .savingzone {
+    &__banner-title {
+      font-size: 20px;
+    }
+    &__banner-text {
+      font-size: 14px;
+    }
+    &__banner-link {
+      font-size: 14px;
+      padding: 10px 34px;
+    }
+  }
+}
 @media (max-width: 748px) {
   .top-slider {
     &__content {
@@ -822,6 +935,50 @@
 
     .slick-prev {
       left: 30px;
+    }
+  }
+  .savingzone {
+    &__banner-box {
+      width: 90%;
+    }
+    &__banner-title {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    &__banner-text {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media (max-width: 680px) {
+  .arrival {
+    .slick-slider {
+      width: 100%;
+    }
+  }
+  .savingzone {
+    &__item {
+      width: 100%;
+      padding-right: 20px;
+
+      &:nth-child(-n+3) {
+        width: 100%;
+      }
+    }
+    &__inner-bottom {
+      flex-wrap: wrap;
+    }
+    &__banner {
+      border-radius: 12px 12px 0 0;
+      padding: 30px 20px;
+    }
+    &__banner-box {
+      width: 100%;
+    }
+    &__banner-img {
+      width: 100%;
+      border-radius: 0 0 12px 12px;
     }
   }
 }
@@ -861,6 +1018,62 @@
       padding: 12px 30px;
     }
   }
+  .deals {
+    &__item {
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+      background-image: none !important;
+      height: 286px;
+      &:nth-child(1) {
+        background-color: #febb47;
+      }
+      &:nth-child(2) {
+        background-color: #62447a;
+      }
+    }
+    &__title {
+      font-size: 26px;
+    }
+  }
+  .arrival {
+    padding-top: 70px;
+  }
+  .savingzone {
+    padding-top: 70px;
+    &__inner-top {
+      margin-bottom: 70px;
+    }
+    &__item {
+      height: auto;
+    &--cargo,
+    &--urban,
+    &--oversized {
+      color: $title;
+      .savingzone__content {
+          text-align: right;
+          align-items: flex-end;
+        }
+      }
+    }
+    &__content-label {
+      margin-bottom: 10px;
+    }
+    &__content-title {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+    &__content-text {
+      font-size: 12px;
+    }
+    &__content-subtext {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    &__content-img {
+      margin-bottom: 20px;
+    }
+  }
 }
 @media (max-width: 370px) {
   .top-slider {
@@ -888,6 +1101,20 @@
     }
     .slick-next {
       right: 40%;
+    }
+  }
+  .deals {
+    &__toptitle {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    &__link {
+      font-size: 18px;
+      line-height: 1.4;
     }
   }
 }

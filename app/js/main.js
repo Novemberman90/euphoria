@@ -464,25 +464,32 @@ $(function() {
     slidesToShow: 4,
     slidesToScroll: 4, 
     infinite: true,
-    variableWidth: true,
+    /* centerMode: true, */
+   /*  variableWidth: true, */
     dots: false,
     prevArrow: '<button type="button" class="slick-prev"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5857 7L1.58569 7M6.58569 13L1.2928 7.70711C0.902277 7.31658 0.902277 6.68342 1.2928 6.29289L6.58569 0.999999" stroke="#3C4242" stroke-width="1.6" stroke-linecap="round"/></svg></button>',
     nextArrow: '<button type="button" class="slick-next"><svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 7H14M9 1L14.2929 6.29289C14.6834 6.68342 14.6834 7.31658 14.2929 7.70711L9 13" stroke="#3C4242" stroke-width="1.6" stroke-linecap="round"/></svg></button>',
       responsive: [
     {
-      breakpoint: 1439,
+      breakpoint: 1250,
       settings: {
-        centerMode: true,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 3,
       }
     },
     {
-      breakpoint: 1019,
+      breakpoint: 960,
       settings: {
-        centerMode: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 861,
+      settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
+        variableWidth: true,
       }
     },
     {
@@ -491,6 +498,7 @@ $(function() {
         centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        variableWidth: true,
       }
     },
   ]
@@ -498,7 +506,6 @@ $(function() {
 
 
   $('.top-slider__inner').slick({
-    centerMode: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,

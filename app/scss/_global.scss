@@ -48,7 +48,7 @@ select {
 }
 .title {
   font-size: 28px;
-  line-height: 33.5px;
+  line-height: 33px;
   letter-spacing: 0.02em;
   @extend %coreSansC-600;
   display: block;
@@ -238,7 +238,16 @@ select {
     }
   }
 }
-
+@media (max-width: 1439px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1340px) {
+  .container {
+    padding: 0 20px;
+  }
+}
 @media (max-width: 1260px) {
   .container,
   .container-m {
