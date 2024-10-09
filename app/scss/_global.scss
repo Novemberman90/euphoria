@@ -337,6 +337,11 @@ select {
     }
   }
 }
+@media (max-width: 578px) {
+  .title {
+    margin-bottom: 50px;
+  }
+}
 @media (max-width: 370px) {
   .container,
   .container-m {
