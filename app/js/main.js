@@ -390,7 +390,24 @@ $(function() {
     slidesToScroll: 2, 
     infinite: true,
     dots: true,
-    arrows: false
+    arrows: false,
+    responsive: [
+    {
+      breakpoint: 1290,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    },
+ 
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
   });
 
     $('.filter-price__input').ionRangeSlider({
@@ -406,49 +423,6 @@ $(function() {
       /* $('.filter-price__from').text(data.from) - так я указываю атрибут у класса с какого эоемента нужно принимать значение */
      }
   });
-
-  /*  функция сокращения текста  */
-    $(function() {
-        let truncate = function(el) {
-            let text = el.text(),
-                height = el.height(),
-                clone = el.clone();
-
-    	  clone.css({
-                visibility: 'hidden',
-                height: 'auto'
-            });
-            el.after(clone);
-
-            let l = text.length - 1;
-            for (; l >= 0 && clone.height() > height; --l) {
-                clone.text(text.substring(0, l) + '...');
-            }
-
-            el.text(clone.text());
-            clone.remove();
-        };
-
-        $.fn.truncateText = function() {
-            return this.each(function () {
-                truncate($(this));
-            });
-        };
-        
-         $('.feedback__item-text').truncateText();
-    });
-
-    /* $(".feedback__item-text").text(function(i, text) {
-
-        if (text.length >= 50) {
-          text = text.substring(0, 50);
-          var lastIndex = text.lastIndexOf(" ");       // позиция последнего пробела
-          text = text.substring(0, lastIndex) + '...'; // обрезаем до последнего слова
-        }
-        
-        $(this).text(text);
-        
-      }); */
 
   /* index */
 
@@ -516,7 +490,25 @@ $(function() {
     nextArrow: '<button type="button" class="slick-next"><svg width="23.869629" height="44.069016" viewBox="0 0 23.8696 44.069" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path id="Vector" d="M0.5 0.49C0.65 0.34 0.84 0.21 1.05 0.12C1.26 0.04 1.48 0 1.7 0C1.93 0 2.15 0.04 2.36 0.12C2.56 0.21 2.75 0.34 2.91 0.49L23.36 20.83C23.52 20.99 23.65 21.17 23.73 21.38C23.82 21.59 23.86 21.81 23.86 22.03C23.86 22.25 23.82 22.47 23.73 22.68C23.65 22.89 23.52 23.07 23.36 23.23L2.91 43.57C2.59 43.89 2.16 44.06 1.7 44.06C1.25 44.06 0.82 43.89 0.5 43.57C0.18 43.25 0 42.82 0 42.37C0 41.92 0.18 41.49 0.5 41.17L19.75 22.03L0.5 2.89C0.34 2.74 0.21 2.55 0.13 2.34C0.04 2.14 0 1.92 0 1.69C0 1.47 0.04 1.25 0.13 1.04C0.21 0.84 0.34 0.65 0.5 0.49Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/></svg></button>' ,
   });
   
-  
+  /* Автоматический отступ main от header */
+  $(function (params) {
+    function mainMargin(){
+      // Вычисляем высоту header
+      const headerHeight = $('.header').outerHeight();
+
+      // Применяю оступ для main равный высоте header
+      $('.main').css('margin-top', headerHeight + 'px');
+    }
+    // вызываю функцию при загрузке страницы
+    $(document).ready(function (params) {
+      mainMargin();
+    });
+    
+    // обновляю отступ при изминеии окна
+    $(window).resize(function () {
+      mainMargin();
+    });
+  });
 });
 
 /* шаблон для создания карточек */
