@@ -34,15 +34,15 @@ function fonts(){
 
 // конвертация картинок
 function images() {
-    return src(['app/images/src/*.*', '!app/images/src/*.svg'])
+    return src(['app/images/src/**/*.*', '!app/images/src/*.svg'])
     .pipe(newer('app/images'))
     .pipe(avif({quality : 50}))
 
-    .pipe(src('app/images/src/*.*')) // путь к орегиналам, чтобы не пытался перевести с avif в webp
+    .pipe(src('app/images/src/**/*.*')) // путь к орегиналам, чтобы не пытался перевести с avif в webp
     .pipe(newer('app/images'))
     .pipe(webp())
 
-    .pipe(src('app/images/src/*.*')) // тут тоже нужны оригиналы
+    .pipe(src('app/images/src/**/*.*')) // тут тоже нужны оригиналы
     .pipe(newer('app/images')) 
     .pipe(imagemin([
     imagemin.gifsicle({interlaced: true}),
@@ -94,7 +94,7 @@ function styles() {
 // эта функция следит за всеми измениями в указанных файлах
 function watching(){
     watch(['app/**/*.scss'], styles)
-    watch(['app/images/src'], images)
+    watch(['app/images/src/**/*.*'], images)
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
     watch(['app/**/*.html']).on('change', browserSync.reload); // app/**/*.html - вот так найдёт абсолютно все html
 

@@ -436,7 +436,7 @@ $(function() {
 
   $('.arrival__slider').slick({
     slidesToShow: 4,
-    slidesToScroll: 4, 
+    slidesToScroll: 3, 
     infinite: true,
     /* centerMode: true, */
    /*  variableWidth: true, */
@@ -451,28 +451,25 @@ $(function() {
         slidesToScroll: 3,
       }
     },
-    {
+/*     {
       breakpoint: 960,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
       }
-    },
+    }, */
     {
       breakpoint: 861,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
-        variableWidth: true,
       }
     },
     {
-      breakpoint: 680,
+      breakpoint: 478,
       settings: {
-        centerMode: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        variableWidth: true,
       }
     },
   ]
