@@ -821,6 +821,13 @@
       }
     }
   }
+  .product-card {
+    width: 226px;
+
+    &__content-title {
+      margin-bottom: 0;
+    }
+  }
 }
 @media (max-width: 1250px) {
   .deals {
@@ -963,7 +970,7 @@
   }
 
 }
-@media (max-width: 861px) {
+@media (max-width: 870px) {
   .savingzone {
     &__banner-title {
       font-size: 20px;

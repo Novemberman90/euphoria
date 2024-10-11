@@ -59,9 +59,9 @@ select {
     position: absolute;
     content:'';
     width: 6px;
-    height: 28px;
+    height: 100%;
     left: 0;
-    top: 1px;
+    top: 0px;
     background-color: $accent;
     border-radius: 10px ;
   }
