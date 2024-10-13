@@ -385,9 +385,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    max-width: 532px;
-    width: 100%;
+    width: 532px;
     height: 328px;
+    border-radius: 16px;
   }
 
   &__popup {
@@ -396,7 +396,7 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 328px;
+    height: 100%;
     position: relative;
     background-color: rgba(61, 66, 66, 0.4);
     border-radius: 16px;
@@ -552,7 +552,7 @@
       }
 
       td {
-        padding: 25px 0 25px 25px;
+        padding: 25px 10px 25px 25px;
 
         p {
           @extend %causten-500;
@@ -601,6 +601,25 @@
       margin-right: 20px;
     }
   }
+}
+@media (max-width: 1200px) {
+  .product-descr {
+    &__inner {
+      display: block;
+    }
+    &__video {
+      width: 100%;
+    }
+  }
+  .product-tabs {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .description{
+    &__table {
+      width: 100%;
+    }
+  } 
 }
 @media (max-width: 1180px) {
   .container-style {
@@ -715,6 +734,32 @@
       margin-bottom: 25px;
     }
   }
+  .product-descr {
+    padding-top: 70px;
+  }
+  .description {
+    &__tbody {
+      tr {
+        td {
+          padding-left: 10px;
+          p {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .product-tabs {
+    &__top-item {
+      display: block;
+      & + .product-tabs__top-item {
+        margin-left: 0;
+        padding-top: 10px;
+      }
+    }
+  } 
 }
 @media (max-width: 439px) {
   .product-one {
@@ -738,6 +783,27 @@
       }
     }
   }
+  .description {
+    &__tbody {
+      tr {
+        td {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          p {
+            font-size: 14px;
+          &:first-child {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .product-descr{
+    &__text {
+      font-size: 16px;
+    }
+  } 
 }
 @media (max-width: 370px) {
   .product-one {
@@ -752,6 +818,25 @@
     &__size-label {
       &+.product-filter__size-label {
         margin-left: 15px;
+      }
+    }
+  }
+  .description {
+    &__text {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    &__tbody {
+      tr {
+        td {
+          padding: 10px 5px;
+          p {
+            font-size: 12px;
+            &:first-child {
+              margin-bottom: 5px;
+            }
+          }
+        }
       }
     }
   }
