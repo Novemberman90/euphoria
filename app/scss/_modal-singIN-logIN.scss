@@ -12,9 +12,9 @@
   }
 
   &__content {
-    max-width: 568px;
-    width: 100%;
+    width: 568px;
     padding-top: 60px;
+    margin-left:35px;
   }
 
   &__title {
@@ -58,7 +58,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 58px;
+    padding: 16px 10px;
     border: 1px solid $title;
     border-radius: 8px;
     color: $accent;
@@ -84,7 +84,6 @@
   &__submit-label {
     position: relative;
     padding-left: 32px;
-
     &--google,
     &--twitter {
       &::before {
@@ -141,6 +140,7 @@
   }
 
   &__field-label {
+    display: block;
     color: $title;
     @extend %causten-400;
     font-size: 18px;
@@ -254,8 +254,7 @@
     line-height: 19px;
   }
   &__form-btn {
-    width: 167px;
-    height: 54px;
+    padding: 16px 57px;
     border-radius: 8px;
     background: rgb(138, 51, 253);
     display: flex;
@@ -443,5 +442,133 @@
     font-size: 16px;
     line-height: 21px;
     color: #ff0000;
+  }
+}
+@media (max-width: 1439px) {
+  .modal {
+    &__inner {
+      padding-right: 50px;
+    }
+  }
+}
+@media (max-width: 1340px) {
+  .modal {
+    &__inner {
+      padding-right: 20px;
+    }
+  }
+}
+@media (max-width: 1180px) {
+  .modal {
+    &__img {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 960px) {
+  .modal {
+    &__inner {
+      padding-left: 20px;
+      justify-content: center;
+    }
+  
+    &__img {
+      display: none;
+    }
+  
+    &__content {
+      margin-left: 0;
+      padding-bottom: 50px;
+    }
+    &__submit {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 870px) {
+  .modal {
+    &__title {
+      font-size: 30px;
+    }
+    &__confirm-new-error {
+      font-size: 14px;
+    }
+
+  }
+}
+/* @media (max-width: 748px) {
+  .modal {
+    &__inner {
+      padding-left: 20px;
+      justify-content: center;
+    }
+    &__img {
+      display: none;
+    }
+    &__content {
+      margin-left: 0;
+      padding-bottom: 50px;
+    }
+  }
+} */
+@media (max-width: 578px) {
+  .modal {
+    &__title {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+    &__subtitle {
+      font-size: 14px;
+    }
+    &__submit {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+    }
+    &__separetor {
+      font-size: 14px;
+    }
+    &__separetor-text {
+      padding: 0 10px;
+    }
+    &__field-label {
+      input {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+    &__field-label {
+      font-size: 16px;
+    }
+    &__password-security {
+      span {
+        font-size: 14px;
+      }
+    }
+    &__password-error,
+    &__create-new-note {
+      font-size: 12px;
+    }
+    &__password-link,
+    &__checkbox-label,
+    &__create-new-name,
+    &__confirm-new-name {
+      font-size: 14px;
+    }
+
+  }
+}
+@media (max-width: 439px) {
+  .modal {
+    &__separetor {
+      font-size: 12px;
+    }
+    &__field-label,
+    &__form-question {
+      font-size: 14px;
+    }
+    &__form-btn {
+      padding: 14px 45px;
+    }
   }
 }
