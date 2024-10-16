@@ -345,6 +345,13 @@ select {
     margin-bottom: 50px;
   }
 }
+@media (max-width: 439px) {
+  .breadcrumbs {
+    &__item {
+      font-size: 16px;
+    }
+  }
+}
 @media (max-width: 370px) {
   .container,
   .container-m {
@@ -369,5 +376,10 @@ select {
   .user-register {
     width: 100%;
     justify-content: center;
+  }
+  .breadcrumbs {
+    &__list {
+      flex-wrap: wrap;
+    }
   }
 }
