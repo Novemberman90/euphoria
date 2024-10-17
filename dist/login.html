@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/styles.min.css">
+
+</head>
+
+<body>
+<header class="header header-shop header-register">
+  <div class="container">
+    <div class="header__inner header-register__inner">
+      <a class="header__logo header-register__logo" href="#">
+        <img src="images/logo.svg" alt="logo">
+      </a>
+      <div class="header-register__box">
+        <form class="header__search-form header-register__form" action="#">
+          <label class="header__search-label header-register__label" for="#">
+            <button class="header__search-btn" type="submit">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.6363 17.697C16.9292 17.9899 17.4041 17.9899 17.697 17.697C17.9899 17.4041 17.9899 16.9292 17.697 16.6363L16.6363 17.697ZM13.9167 8.83334C13.9167 11.6408 11.6408 13.9167 8.83334 13.9167V15.4167C12.4692 15.4167 15.4167 12.4692 15.4167 8.83334H13.9167ZM8.83334 13.9167C6.02589 13.9167 3.75 11.6408 3.75 8.83334H2.25C2.25 12.4692 5.19746 15.4167 8.83334 15.4167V13.9167ZM3.75 8.83334C3.75 6.02589 6.02589 3.75 8.83334 3.75V2.25C5.19746 2.25 2.25 5.19746 2.25 8.83334H3.75ZM8.83334 3.75C11.6408 3.75 13.9167 6.02589 13.9167 8.83334H15.4167C15.4167 5.19746 12.4692 2.25 8.83334 2.25V3.75ZM12.4697 13.5303L16.6363 17.697L17.697 16.6363L13.5303 12.4697L12.4697 13.5303Z"
+                  fill="" />
+              </svg>
+            </button>
+            <input class="header__search-input" type="search" placeholder="Search">
+          </label>
+          <select class="header-register__langauge-select">
+            <option value="en">English (united States)</option>
+            <option value="ua">Ukranian</option>
+            <option value="fr">France</option>
+          </select>
+        </form>
+      </div>
+      <div class="user-register">
+        <a class="user-register__link user-register__link--active " href="#">Login</a>
+        <a class="user-register__link" href="./singup.html">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</header>
+ <main class="main">
+  <section class="modal">
+    <div class="container-fluid">
+      <div class="modal__inner">
+        <img class="modal__img" src="./images/content/login-baner.avif" alt="">
+        <div class="modal__content">
+          <h1 class="modal__title">Sign In Page</h1>
+          <form class="modal__form" action="#">
+            <div class="modal__submit-box">
+              <button class="modal__submit" type="submit">
+                <span class="modal__submit-label modal__submit-label--google">Continue With Google</span>
+              </button>
+              <button class="modal__submit" type="submit">
+                <span class="modal__submit-label modal__submit-label--twitter">Continue With Twitter</span>
+              </button>
+            </div>
+            <p class="modal__separetor">
+              <span class="modal__separetor-text">or</span>
+            </p>
+            <div class="modal__field">
+              <div class="modal__field-box modal__user">
+                <label class="modal__field-label" for="#">
+                  <span class="modal__field-name">User name or email address</span>
+                  <input class="modal__field-input" type="text">
+                </label>
+              </div>
+              <div class="modal__field-box modal__password">
+                <label class="modal__field-label" for="#">
+                  <div class="modal__field-label-box">
+                    <span class="modal__field-name">Password</span>
+                    <div class="modal__password-security">
+                      <svg class="modal__password-show" style="display: none;" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 0C5.04856 0 1.65436 2.37401 0.151954 5.77272C0.0495662 6.00434 0.0495663 6.26839 0.151954 6.50001C1.65436 9.89872 5.04856 12.2727 9 12.2727C12.9514 12.2727 16.3456 9.89872 17.848 6.50001C17.9504 6.26839 17.9504 6.00434 17.848 5.77272C16.3456 2.37401 12.9514 0 9 0ZM9 10.2273C6.74182 10.2273 4.90909 8.39455 4.90909 6.13636C4.90909 3.87818 6.74182 2.04545 9 2.04545C11.2582 2.04545 13.0909 3.87818 13.0909 6.13636C13.0909 8.39455 11.2582 10.2273 9 10.2273ZM9 3.68182C7.64182 3.68182 6.54545 4.77818 6.54545 6.13636C6.54545 7.49455 7.64182 8.59091 9 8.59091C10.3582 8.59091 11.4545 7.49455 11.4545 6.13636C11.4545 4.77818 10.3582 3.68182 9 3.68182Z"
+                          fill="" />
+                      </svg>
+                      <svg class="modal__password-hide" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16.9682 0.869862L16.2322 0.133919C16.0242 -0.0740721 15.6402 -0.042063 15.4002 0.245882L12.84 2.78985C11.688 2.29391 10.4241 2.05391 9.09604 2.05391C5.14392 2.06984 1.72014 4.37381 0.0720207 7.68602C-0.0240069 7.89401 -0.0240069 8.14994 0.0720207 8.32593C0.839954 9.89395 1.99202 11.19 3.43203 12.1659L1.33603 14.2939C1.09603 14.5339 1.06402 14.9179 1.22407 15.1259L1.96002 15.8618C2.16801 16.0698 2.55199 16.0378 2.79199 15.7499L16.8399 1.70198C17.1439 1.46211 17.1759 1.07815 16.9679 0.870136L16.9682 0.869862ZM9.94403 5.70175C9.67202 5.63773 9.38407 5.55778 9.11205 5.55778C7.752 5.55778 6.66411 6.6458 6.66411 8.00571C6.66411 8.27772 6.72813 8.56566 6.80809 8.83768L5.73597 9.89372C5.41601 9.33376 5.24003 8.70966 5.24003 8.00574C5.24003 5.87776 6.95205 4.16574 9.08003 4.16574C9.78409 4.16574 10.4081 4.34172 10.968 4.66168L9.94403 5.70175Z"
+                          fill="" />
+                        <path
+                          d="M18.1206 7.68596C17.5606 6.56591 16.8246 5.55798 15.9127 4.74194L12.9366 7.68596V8.00591C12.9366 10.1339 11.2246 11.8459 9.09661 11.8459H8.77665L6.88867 13.7339C7.59273 13.8779 8.32868 13.9739 9.04868 13.9739C13.0008 13.9739 16.4246 11.6699 18.0727 8.34177C18.2167 8.11771 18.2167 7.8938 18.1206 7.68578L18.1206 7.68596Z"
+                          fill="" />
+                      </svg>
+                      <span>Hide</span>
+                    </div>
+                  </div>
+                  <input class="modal__field-input" id="password-login" type="password">
+                </label>
+                <a class="modal__password-link" href="./reset.html">Forget your password</a>
+              </div>
+            </div>
+            <button class="modal__form-btn" type="submit">Sign In</button>
+            <span class="modal__form-question">Don’t have an account? <a class="modal__form-question-link" href="./singup.html">Sign up</a></span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/main.min.js"></script>
+</body>
+</html>
