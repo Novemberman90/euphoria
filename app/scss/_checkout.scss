@@ -87,7 +87,6 @@
       display: flex;
       flex-direction: column;
       width: 382px;
-      width: 100%;
       padding-bottom: 30px;
 
       input {
@@ -177,7 +176,7 @@
     width: 12px;
     height: 7px;
     border: none;
-    background-image: url('../images/select-icon.svg');
+    background-image: url('../images/icon/select-icon.svg');
   }
 
   .jq-selectbox__dropdown ul {
@@ -255,19 +254,19 @@
       content: '';
       width: 18px;
       height: 18px;
-      background-image: url('../images/checked-box.svg');
+      background-image: url('../images/icon/checked-box.svg');
     }
   }
 
   &__bottom-checkstyle {
     position: absolute;
     content: '';
-    background-image: url('../images/box-disabled.svg');
+    background-image: url('../images/icon/box-disabled.svg');
     width: 18px;
     height: 18px;
 
     &:hover {
-      background-image: url('../images/box.svg');
+      background-image: url('../images/icon/box.svg');
     }
   }
 
@@ -326,7 +325,7 @@
       content: '';
       width: 18px;
       height: 18px;
-      background-image: url('../images/radio-selected.svg');
+      background-image: url('../images/icon/radio-selected.svg');
     }
   }
 
@@ -335,7 +334,7 @@
     content: '';
     width: 18px;
     height: 18px;
-    background-image: url('../images/radio-button.svg');
+    background-image: url('../images/icon/radio-button.svg');
   }
 
   &__text {
@@ -429,7 +428,7 @@
       content: '';
       width: 18px;
       height: 18px;
-      background-image: url('../images/radio-selected.svg');
+      background-image: url('../images/icon/radio-selected.svg');
     }
   }
 
@@ -438,7 +437,7 @@
     content: '';
     width: 18px;
     height: 18px;
-    background-image: url('../images/radio-button.svg');
+    background-image: url('../images/icon/radio-button.svg');
   }
 
   &__box-title {
@@ -473,7 +472,7 @@
 
   &__logo {
     width: 80px;
-    height: 46px;
+    height: auto;
     object-fit: cover;
   }
 
@@ -685,4 +684,166 @@
 
   }
 
+}
+@media (max-width: 1280px) {
+  .checkout__form {
+    .delivery-form {
+      &__costumer,
+      &__region,
+      &__adress,
+      &__postal {
+        label {
+          width: 100%;
+        }
+      }
+    }
+    .jq-selectbox__select,
+    .jq-selectbox__dropdown ul {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 960px) {
+  .payment-method {
+    &__logo {
+      width: 66px;
+    }
+  }
+}
+@media (max-width: 870px) {
+  .delivery-form {
+    &__box {
+      &--style{
+        padding-right: 0;
+      }
+    }
+  }
+  .checkout {
+    &__inner {
+      flex-wrap: wrap;
+    }
+    &__order {
+      order: 1;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    .checkout-order {
+      width: 100%;
+    }
+    &__content {
+      order: 2;
+    }
+    .payment-method {
+      &__logo-set {
+        gap: 20px;
+      }
+  
+      &__logo {
+        width: 80px;
+      }
+    }
+  }
+}
+@media (max-width: 578px) {
+  .checkout {
+    .shipping-address,
+    .shipping-method {
+      &__box {
+        font-size: 18px;
+        line-height: 1.2;
+        padding-right: 30px;
+      }
+    }
+    .payment-method {
+      &__title-box {
+        font-size: 18px;
+        line-height: 1.2;
+      }
+      &__logo-set {
+        gap: 10px;
+      }
+      &__logo {
+        width: 60px;
+      }
+    }
+  }
+}
+@media (max-width: 439px) {
+  .checkout {
+    .checkout-order {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .delivery-form {
+      &__bottom-label {
+        width: 100%;
+      }
+      &__bottom-text {
+        font-size: 16px;
+        line-height: 1.2;
+        padding-left: 25px;
+      }
+    }
+    .shipping-address,
+    .shipping-method {
+      &__box {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .payment-method {
+      &__container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      &__content {
+        padding-left: 0;
+      }
+    }
+    
+  }
+}
+@media (max-width: 370px) {
+  .checkout {
+    .checkout-order {
+      margin-left: 5px;
+      margin-right: 5px;
+      &__item {
+        display: block;
+      }
+      &__item-title-box {
+        margin-left: 8px;
+      }
+      &__cost {
+        text-align: right;
+      }
+    }
+    &__form-title {
+      font-size: 20px;
+    }
+    .shipping-address,
+    .shipping-method {
+      &__box {
+        padding: 30px 15px;
+        font-size: 16px;
+      }
+    }
+    .shipping-address {
+      &__text {
+        padding-left: 30px;
+      }
+    }
+    .payment-method {
+      &__container {
+        padding: 30px 15px;
+      }
+      &__item {
+        &:last-of-type {
+          label {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
 }

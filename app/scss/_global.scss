@@ -90,7 +90,7 @@ select {
     position: relative;
     &::after {
       position: absolute;
-      background-image: url('../images/filter-icon-left.svg');
+      background-image: url('../images/icon/filter-icon-left.svg');
       content: '';
       width: 7px;
       height: 13px;
@@ -200,7 +200,7 @@ select {
     width: 10px;
     height: 5px;
     border: none;
-    background-image: url('../images/langauge-select-icon.svg');
+    background-image: url('../images/icon/langauge-select-icon.svg');
   }
 
   .jq-selectbox__dropdown ul {
@@ -344,11 +344,21 @@ select {
   .title {
     margin-bottom: 50px;
   }
+  .empty-cart {
+    &__title {
+      font-size: 26px;
+    }
+  }
 }
 @media (max-width: 439px) {
   .breadcrumbs {
     &__item {
       font-size: 16px;
+    }
+  }
+  .empty-cart {
+    &__title {
+      font-size: 22px;
     }
   }
 }
@@ -380,6 +390,11 @@ select {
   .breadcrumbs {
     &__list {
       flex-wrap: wrap;
+    }
+  }
+  .empty-cart {
+    &__title {
+      font-size: 20px;
     }
   }
 }

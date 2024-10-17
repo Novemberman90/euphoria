@@ -38,8 +38,7 @@
     line-height: 22px;
     border-radius: 8px;
     background: $accent;
-    width: 246px;
-    height: 46px;
+    padding: 12px 48px 12px 48px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -51,5 +50,27 @@
       &:focus {
         background: #6620C1;
       }
+  }
+}
+
+@media (max-width: 578px) {
+  .empty-cart {
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
+@media (max-width: 439px) {
+  .empty-cart {
+    &__title {
+      font-size: 22px;
+    }
+  }
+}
+@media (max-width: 370px) {
+.empty-cart {
+    &__title {
+      font-size: 20px;
+    }
   }
 }

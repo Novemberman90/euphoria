@@ -8,20 +8,20 @@
   &__image-box {
     position: relative;
     margin-bottom: 15px;
-    &::before {
-      position: absolute;
-      content: '';
-      background-image: url('../images/404-img.svg');
-      width: 395px;
-      height: 228px;
-      bottom: 0;
-      left: -50%;
-    }
+    max-width: 396px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   &__img {
     object-fit: cover;
     width: 181px;
     height: 257px;
+  }
+  &__svg {
+    position: absolute;
+    top: 40px;
+    left: 14px;
   }
   &__content {
     max-width: 460px;
@@ -47,8 +47,7 @@
   &__link {
     border-radius: 8px;
     background: $accent;
-    width: 244px;
-    height: 46px;
+    padding: 12px 48px 12px 48px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -62,6 +61,20 @@
     }
     &:focus {
       background: #6620c1;
+    }
+  }
+}
+@media (max-width: 439px) {
+  .page-404 {
+    &__title {
+      font-size: 26px;
+    }
+  }
+}
+@media (max-width: 439px) {
+  .page-404 {
+    &__subtitle {
+      font-size: 14px;
     }
   }
 }

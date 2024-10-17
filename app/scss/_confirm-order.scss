@@ -59,8 +59,6 @@
     color: $white;
     border-radius: 8px;
     background: $accent;
-    width: 190px;
-    height: 54px;
     display: block;
     padding: 16px 20px 16px 20px;
     &:hover {
@@ -71,5 +69,35 @@
       &:focus {
         background: #6620C1;
       }
+  }
+}
+@media (max-width: 870px) {
+  .confirm-order {
+   &__message-box {
+    background-image: none !important;
+    justify-content: center;
+   }
+   &__message {
+    bottom: auto;
+    left: auto;
+   }
+  }
+}
+@media (max-width: 578px) {
+  .confirm-order {
+    &__message-box {
+      width: auto;
+    }
+    &__message {
+      background-image: none !important;
+      max-width: 412px;
+      width: 100%;
+    }
+    &__content {
+      margin-left: 0;
+    }
+    &__message-btn {
+      right: 0;
+    }
   }
 }

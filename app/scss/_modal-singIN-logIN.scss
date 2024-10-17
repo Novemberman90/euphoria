@@ -99,13 +99,13 @@
 
     &--google {
       &::before {
-        background-image: url('../images/google-icon.svg');
+        background-image: url('../images/icon/google-icon.svg');
       }
     }
 
     &--twitter {
       &::before {
-        background-image: url('../images/twitter-icon.svg');
+        background-image: url('../images/icon/twitter-icon.svg');
       }
     }
   }
@@ -336,17 +336,17 @@
       position: absolute;
       width: 18px;
       height: 18px;
-      background-image: url('../images/checked-box.svg');
+      background-image: url('../images/icon/checked-box.svg');
     }
   }
   &__checkbox-checkstyle {
     position: absolute;
-    background-image: url('../images/box-disabled.svg');
+    background-image: url('../images/icon/box-disabled.svg');
     width: 18px;
     height: 18px;
 
     &:hover {
-      background-image: url('../images/box.svg');
+      background-image: url('../icon/images/box.svg');
     }
   }
   &__checkbox-text {

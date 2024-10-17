@@ -91,6 +91,18 @@
   &__action {
     display: inline-flex;
     vertical-align: sub;
+    svg {
+      path {
+        fill: #807d7e;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $accent;
+        }
+      }
+    }
   }
   .jq-number__field {
     width: 100px;
