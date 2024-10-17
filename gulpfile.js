@@ -110,7 +110,7 @@ function cleanDist() {
 function building() {
     return src([
         'app/css/styles.min.css',
-        'app/images/*.*', // выбираем все файлы (картинки)
+        'app/images/**/*.*', // выбираем все файлы (картинки)
         'app/fonts/*.*',
         'app/js/main.min.js',
         'app/**/*.html'

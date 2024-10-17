@@ -43,10 +43,6 @@
     & > * {
       align-self: center;
     }
-    &>*:not(.card-product__details) {
-      text-align: center;
-    }
-    
   }
 
   &__details {
@@ -87,6 +83,14 @@
     font-size: 18px;
     line-height: 22px;
     color: $title;
+  }
+  &__quantity-form,
+  &__cost,
+  &__shipping,
+  &__subtotal,
+  &__action-box
+  {
+    text-align: center;
   }
   &__action {
     display: inline-flex;
@@ -428,6 +432,9 @@
     &__details {
       grid-column: 1/-1;
       gap: 20px;
+    }
+    .jq-number__field {
+      width: 105px;
     }
   }
 }
