@@ -370,12 +370,9 @@
   .card-product {
     &__item {
       grid-template-columns: 3fr repeat(3, 1fr);
-      & div:last-child {
-        justify-items: center;
-      }
     }
     &__title {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1;
     }
     &__price-box,
@@ -385,6 +382,10 @@
     &__cost,
     &__shipping {
       display: none;
+    }
+    &__quantity-form {
+      width: 105px;
+      text-align: left;
     }
   }
   .cart-footer {
@@ -420,9 +421,9 @@
       grid-template-rows: minmax(50px, auto);
       gap: 15px;
       padding: 25px 0;
-      &>*:not(.card-product__details) {
+/*       &>*:not(.card-product__details) {
         text-align: left;
-      }
+      } */
     }
     &__details {
       grid-column: 1/-1;
