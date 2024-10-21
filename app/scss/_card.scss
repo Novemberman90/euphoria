@@ -425,9 +425,6 @@
       grid-template-rows: minmax(50px, auto);
       gap: 15px;
       padding: 25px 0;
-/*       &>*:not(.card-product__details) {
-        text-align: left;
-      } */
     }
     &__details {
       grid-column: 1/-1;
